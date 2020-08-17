@@ -917,7 +917,7 @@ footer div p.caption{
 
 
 /* ==================================================================== */
-/* ================ Break Point 2: Medium (960px) ===================== */
+/* ================ Break Point 2: Medium (960px) (60em) ===================== */
 /* ==================================================================== */
 
 @media screen and (min-width: 60em) {
@@ -1051,8 +1051,8 @@ footer div p.caption{
 /* ==================================================================== */
 
 @media screen and (min-width: 100em) {
-  
   /* limit size of content area */
+  /*
   .container{
     max-width: 1280px;
     margin: 0 auto;
@@ -1062,6 +1062,7 @@ footer div p.caption{
     max-width: 640px;
     margin: 0 auto;
   }
+  */
 
 }
 
@@ -1073,6 +1074,7 @@ footer div p.caption{
 @media screen and (min-width: 120em) {
   
   /* limit size of content area */
+  /*
   .container{
     max-width: 1600px;
     margin: 0 auto;
@@ -1082,5 +1084,6 @@ footer div p.caption{
     max-width: 800px;
     margin: 0 auto;
   }
+  *?
   
 }
