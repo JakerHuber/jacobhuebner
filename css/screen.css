@@ -7,28 +7,30 @@ Material design scale
 https://material.io/design/typography/the-type-system.html#type-scale
 
 Table of Contents:
-1. Main HTML Structure
-2. Scaled fonts
-3. Responsive Media
-4. Navigation
-5. Footer
-6. Drawer
-7. Formatting
-8. Flex grid
-9. Colors
-10. Bio page
-11. Projects page
-12. Contact page
-13. Media queries
-13.1. 600px Break Point 1: Extra small
-13.2. 960px Break Point 2: Medium
-13.3. 1280px Break Point 3: Medium-large
-13.4. 1440px Break Point 4: Medium-large
-13.5. 1600px Break Point 5: Extra large
-13.6. 1920px Break Point 6: extra-large
+1. Core HTML
+2. Core resources
+3. Core components 
+4. Main Pages
+5. Media queries
+
 */
 
-/* ===================  1. Main HTML Structure =================== */
+/* ==================================================================== */
+/* ==================================================================== */
+/* ==================================================================== */
+/* ==================================================================== */
+/* ====================== Part 1: Core HTML  ========================== */
+/* ==================================================================== */
+/* ==================================================================== */
+/* ==================================================================== */
+/* ==================================================================== */
+
+
+
+
+/* ==================================================================== */
+/* ====================  HTML Structure =============================== */
+/* ==================================================================== */
 
 *, *:before, *:after{
   box-sizing: inherit;
@@ -59,6 +61,10 @@ main {
 }
 
 section{
+
+}
+
+article{
   padding: 1rem 1rem;
   background-color: white;
   overflow: hidden;
@@ -92,7 +98,38 @@ footer{
 }
 
 
-/* ========================  2. Scaled fonts ======================== */
+/* ==================================================================== */
+/* ====================  Responsive media ============================= */
+/* ==================================================================== */
+
+img, audio, video {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  margin: 0 auto;      
+}
+
+
+
+
+/* ==================================================================== */
+/* ==================================================================== */
+/* ==================================================================== */
+/* ==================================================================== */
+/* ====================== Part 2: Core resources  ===================== */
+/* ==================================================================== */
+/* ==================================================================== */
+/* ==================================================================== */
+/* ==================================================================== */
+
+
+
+
+/* ==================================================================== */
+/* =====================  Scaled fonts ================================ */
+/* ==================================================================== */
 
 h1 {
   font-size: 6em; /* 96px = 16px * 6em */
@@ -242,218 +279,55 @@ p.margintop{
   padding: 0 0 1rem 0;
 }
 
-
-/* =======================  3. Responsive Media ======================= */
-img, audio, video {
-  display: block;
-  max-width: 100%;
-}
-
-img {
-  margin: 0 auto;      
+.title {
+  text-align: center;
 }
 
 
-/* ==========================  4. Navigation ========================== */
-.menubtn{
-  border: 0;
-  margin: 0;
-  padding: 0;
-  padding: 14px 16px;
-  background-color: white;
-  color: black;
-  text-decoration: none;
-}
+/* ==================================================================== */
+/* =====================  Colors ====================================== */
+/* ==================================================================== */
 
-/* Hamburger menu and logo */
-.specialbtn{
-  font-weight: 900;
-  font-size: 20px
-}
-
-/* Navigation items */
-.navitemlist{
-  clear:both;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-}
-
-.navitemlist li{
-  display: inline-block;
-}
-
-.navitemlist li a{
-  display: inline-block;
-  text-decoration: none;
-  color: black;
-  background-color: white;
-  transition: 0.2s;
-}
-
-.navitemlist li a:hover {
-  position: relative;
-  /*background-color: whitesmoke;*/
-  box-shadow:inset 0px -4px 0px 0px grey;
-  transition: 0.2s;
-}
-
-/* Highlight nav current page */
-.active{
-  box-shadow:inset 0px -4px 0px 0px grey;
-  transition: 0.2s;
-}
-
-/* =========================== 5. Footer =========================== */
-/* footer */
-footer div{
-  display: flex;
-  justify-content: space-between;
-}
-
-footer div p.caption{
-  line-height: 2.25rem;
-  padding-left: 1rem;
-}
-
-/* ======================== 6. Drawer ============================== */
-/* drawer buttons */
-.drawerbtn{
-  border: 0;
-  margin: 0;
-  padding: 0;
-  padding: 12px 32px;
-  background-color: white;
-  color: grey;
-}
-
-.drawertitlebtn{
-  border: 0;
-  margin: 0;
-  padding: 0;
-  padding: 12px 32px;
-  background-color: white;
-  color: black;
-}
-
-/* smooth animations (borrowed)*/
-.smooth{
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-transition: .25s ease-in-out;
-  -moz-transition: .25s ease-in-out;
-  -o-transition: .25s ease-in-out;
-  transition: .25s ease-in-out;
-  margin: 0;
-  padding: 0;
-  -webkit-text-size-adjust: none;
-}
-
-/* hides checkbox */
-#drawer-toggle {
-  position: absolute;
-  opacity: 0;
-}
-
-/* changes transition color to be more subtle */
-#drawer-toggle-label{
-  background-color: rgba(0, 0, 255, 0);
-}
-
-/* drawer menu pane */
-#drawer {
-  z-index: 4;
-  position: fixed;
-  top: 0;
-  left: -300px;
-  height: 100%;
-  width: 300px;
-  background: white;
-  overflow-x: hidden;
-  overflow-y: scroll;
-
-}
-
-/* checked styles (menu open state) */
-#drawer-toggle:checked{
-  height: 100%;
-  width: calc(100%);
-  background: rgba(255, 255, 255, .8);
-}
-
-#drawer-toggle:checked ~ #drawer{
-  left: 0px;
-}
-
-/* edit drawer when checked */
-#drawer-toggle:checked ~ #drawer-toggle-label{
-  position: fixed;
-  height: 100%;
-  width: calc(100%);
-  color: black;
-  background-color: black;
-  opacity: .5;
-  transition-property: background;
-  transition-duration: .2s;
-  transition-timing-function: linear;
-}
-
-/* fix moved company logo */
-#drawer-toggle:checked ~ #logo{
-  margin-left: 51.3px;
-}
-
-/* Drawer menu items */
-.draweritemlist{
-  display: block;
-  border-bottom: 1px solid lightgray;
-}
-
-.draweritemlist li{
-  display: block;
-}
-
-.draweritemlist li a{
-  display: block;
-  text-decoration: none;
+.white{
   background-color: white;
 }
 
-.draweritemlist li a:hover {
-  background-color: whitesmoke;
+.darkestgrey{
+  background-color: #b2b2b2;
 }
 
-/* drawer buttons */
-.cleanbtn{
-  border: 0;
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-  outline: none;
+.darkergrey{
+  background-color: #c3c3c3;
 }
 
-/* ==========================  7. Formatting ========================== */
+.darkgrey{
+  background-color: #d4d4d4;
+}
+
+.grey{
+  background-color: #e5e5e5;
+}
+
+.lightgrey{
+  background-color: #f5f5f5;
+}
+
+.red{
+  color: red;
+}
+
+.green{
+  color: green;
+}
+
+
+/* ==================================================================== */
+/* =========================== Formatting ============================= */
+/* ==================================================================== */
+
 /* Display */
 .inline{
   display: inline-block;
-}
-
-/* homepage */
-.homepage{
-  height: 90vh;
-  min-height: 340px;
-  margin-bottom: 30px;
-}
-
-.peak{
-  margin-top: -30px;
-}
-
-.scene{
-  position: absolute;
 }
 
 /* Alignment */
@@ -599,7 +473,303 @@ footer div p.caption{
   position: relative;
 }
 
-/* ======================== 8. Flex grid ========================= */
+
+
+
+/* ==================================================================== */
+/* ==================================================================== */
+/* ==================================================================== */
+/* ==================================================================== */
+/* ====================== Part 3: Core components  ==================== */
+/* ==================================================================== */
+/* ==================================================================== */
+/* ==================================================================== */
+/* ==================================================================== */
+
+
+
+
+/* ==================================================================== */
+/* ======================== Navigation ================================ */
+/* ==================================================================== */
+
+.menubtn{
+  border: 0;
+  margin: 0;
+  padding: 0;
+  padding: 14px 16px;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+}
+
+/* Hamburger menu and logo */
+.specialbtn{
+  font-weight: 900;
+  font-size: 20px
+}
+
+/* Navigation items */
+.navitemlist{
+  clear:both;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.navitemlist li{
+  display: inline-block;
+}
+
+.navitemlist li a{
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  transition: 0.2s;
+}
+
+.navitemlist li a:hover {
+  position: relative;
+  /*background-color: whitesmoke;*/
+  box-shadow:inset 0px -4px 0px 0px grey;
+  transition: 0.2s;
+}
+
+/* Highlight nav current page */
+.active{
+  box-shadow:inset 0px -4px 0px 0px grey;
+  transition: 0.2s;
+}
+
+
+/* ==================================================================== */
+/* =================== Navigation Drawer ============================== */
+/* ==================================================================== */
+
+/* drawer buttons */
+.drawerbtn{
+  border: 0;
+  margin: 0;
+  padding: 0;
+  padding: 12px 32px;
+  background-color: white;
+  color: grey;
+}
+
+.drawertitlebtn{
+  border: 0;
+  margin: 0;
+  padding: 0;
+  padding: 12px 32px;
+  background-color: white;
+  color: black;
+}
+
+/* smooth animations (borrowed)*/
+.smooth{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: none;
+}
+
+/* hides checkbox */
+#drawer-toggle {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden; /* remove if you use hyperlinks instead of anchors */
+}
+
+/* changes transition color to be more subtle */
+#drawer-toggle-label{
+  background-color: rgba(0, 0, 255, 0);
+}
+
+/* drawer menu pane */
+#drawer {
+  z-index: 4;
+  position: fixed;
+  top: 0;
+  left: -300px;
+  height: 100%;
+  width: 300px;
+  background: white;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+}
+
+/* checked styles (menu open state) */
+#drawer-toggle:checked{
+  height: 100%;
+  width: calc(100%);
+  background: rgba(255, 255, 255, .8);
+}
+
+#drawer-toggle:checked ~ #drawer{
+  left: 0px;
+}
+
+/* edit drawer when checked */
+#drawer-toggle:checked ~ #drawer-toggle-label{
+  position: fixed;
+  height: 100%;
+  width: calc(100%);
+  color: black;
+  background-color: black;
+  opacity: .5;
+  transition-property: background;
+  transition-duration: .2s;
+  transition-timing-function: linear;
+}
+
+/* fix moved company logo */
+#drawer-toggle:checked ~ #logo{
+  margin-left: 51.3px;
+}
+
+/* Drawer menu items */
+.draweritemlist{
+  display: block;
+  border-bottom: 1px solid lightgray;
+}
+
+.draweritemlist li{
+  display: block;
+}
+
+.draweritemlist li a{
+  display: block;
+  text-decoration: none;
+  background-color: white;
+}
+
+.draweritemlist li a:hover {
+  background-color: whitesmoke;
+}
+
+/* drawer buttons */
+.cleanbtn{
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  outline: none;
+}
+
+/* ==================================================================== */
+/* =========================== Footer ================================= */
+/* ==================================================================== */
+
+/* footer */
+footer div{
+  display: flex;
+  justify-content: space-between;
+}
+
+footer div p.caption{
+  line-height: 2.25rem;
+  padding-left: 1rem;
+}
+
+
+
+
+/* ==================================================================== */
+/* ==================================================================== */
+/* ==================================================================== */
+/* ==================================================================== */
+/* ====================== Part 4: Main Pages ========================== */
+/* ==================================================================== */
+/* ==================================================================== */
+/* ==================================================================== */
+/* ==================================================================== */
+
+
+
+
+/* ==================================================================== */
+/* ============================ Homepage ============================== */
+/* ==================================================================== */
+
+.homepage{
+  position: relative;
+  height: calc(100vh - 128px);
+  min-height: 340px;
+  font-size: 60%;
+  z-index: 1;
+}
+
+.scene{
+  position: absolute;
+  width: 100%;
+  height: calc(100vh - 64px);
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.scene-canvas-1{
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color:rgba(255,255,255,0.1); /* almost transparent white */
+}
+
+
+/* ==================================================================== */
+/* ============================ Bio page ============================== */
+/* ==================================================================== */
+
+.item-list{
+  text-align: center;
+}
+
+.item{
+  display: block;
+  width: 100%;
+  min-width: calc(360px - 4rem);
+}
+
+.item .picture{
+  display: inline-block;
+  vertical-align: middle;
+  width: calc(100%/1 - (1rem * .50));
+  position: relative;
+  max-width: 430px;
+}
+
+.item .picture img{
+  vertical-align: middle;
+  min-width: 270px;
+}
+
+.item .description{
+  display: inline-block;
+  vertical-align: middle;
+  width: calc(100%/1 - (1rem * .50));
+  padding-left: 0rem;
+  text-align: center;
+  margin-top: -36px;
+  position: relative;
+}
+
+
+/* ==================================================================== */
+/* ============================ Project page ========================== */
+/* ==================================================================== */
+
+/* project grid */
 .flex{
   width: 100%;
   display: flex;
@@ -609,19 +779,6 @@ footer div p.caption{
 
 .flex img{
   width: 100%;
-}
-
-/* flex two columns */
-.flex-col-2{
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  margin-bottom: 1rem;
-}
-
-/* only adds bottom margin if there are more than 2 items */
-.flex-col-2:first-child:nth-last-child(2), .flex-col-2:first-child:nth-last-child(2) ~ .flex-col-2{
-  margin-bottom: 0rem;
 }
 
 /* flex three columns */
@@ -637,54 +794,6 @@ footer div p.caption{
   margin-bottom: 0rem;
 }
 
-/* ============================  9. Colors ============================ */
-/* colors */
-.white{
-  background-color: white;
-}
-
-.darkestgrey{
-  background-color: #b2b2b2;
-}
-
-.darkergrey{
-  background-color: #c3c3c3;
-}
-
-.darkgrey{
-  background-color: #d4d4d4;
-}
-
-.grey{
-  background-color: #e5e5e5;
-}
-
-.lightgrey{
-  background-color: #f5f5f5;
-}
-
-.red{
-  color: red;
-}
-
-.green{
-  color: green;
-}
-
-/* ========================= 10. Bio page ========================== */
-.bio-description{
-  max-width: 840px;
-}
-
-.flipable-pic-top{
-  display: none;
-}
-
-.flipable-pic-bottom{
-  display: block; 
-}
-
-/* ======================== 11. Projects page ========================= */
 /* slide down description */
 .project-item-content{
   position: absolute;
@@ -716,7 +825,11 @@ footer div p.caption{
   max-height: 500px;
 }
 
-/* ========================  12. Contact page ======================== */
+
+/* ==================================================================== */
+/* ============================ Contact page ========================== */
+/* ==================================================================== */
+
 .formitem{
   width: 100%;
   padding: .5rem;
@@ -734,15 +847,48 @@ footer div p.caption{
   color: black;
 }
 
-/* ========================  13. Media queries ======================== */
+#contact-form textarea{
+  max-width: 655px;
+  min-width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /* ==================================================================== */
-/* Notes: 360px minimum supported resolution. */
-/* Preferred Possible Break Points: 512px, 600px, 840px, 960px,         */
-/* 1280px, 1440px, 1600px, 1920px.                                      */
+/* ==================================================================== */
+/* ==================================================================== */
+/* ==================================================================== */
+/* ====================== Part 5: Media queries  ====================== */
+/* ==================================================================== */
+/* ==================================================================== */
+/* ==================================================================== */
+/* ==================================================================== */
 
-/* ================ 600px Break Point 1: Extra small ================ */
+
+
+
+/* ==================================================================== */
+/* Notes: 360px minimum supported resolution.                           */
+/* Preferred Possible Break Points: 512px, 600px, 840px, 960px, 1280px, */
+/* 1440px, 1600px, 1920px.                                              */
+/* ==================================================================== */
+
+
+/* ==================================================================== */
+/* ================ Break Point 1: Extra small (600px) ================ */
+/* ==================================================================== */
+
 @media screen and (min-width: 38.2em) { 
-
+  
   /* Navigation items */
   .navitemlist{
     clear: none;
@@ -760,23 +906,58 @@ footer div p.caption{
   .flex-col-3:nth-child(odd){
     margin-right: 1rem;
   }
+  
+  /* Home page resize */
+  .homepage{
+    height: calc(100vh - 64px);
+    font-size: 100%;
+  }
 
 }
 
-/* ================ 960px Break Point 2: Medium ================ */
+
+/* ==================================================================== */
+/* ================ Break Point 2: Medium (960px) ===================== */
+/* ==================================================================== */
+
 @media screen and (min-width: 60em) {
-
-  /* Flex grid resize */
-  /* flex two columns */
-  .flex-col-2{
-    width: calc(100%/2 - (1rem * .5));
+  
+  /* items */
+  .item .picture{
+    display: inline-block;
+    width: calc(100%/2 - (1rem * .50));
+    vertical-align: middle;
+    max-width: none;
   }
 
-  /* vertical gutter */
-  .flex-col-2:nth-child(odd){
-    margin-right: 1rem;
+  .item .picture img{
+    float: right;
+    vertical-align: middle;
+    max-width: 430px;
   }
 
+  .item .description{
+    display: inline-block;
+    width: calc(100%/2 - (1rem * .50));
+    padding-left: 1rem;
+    text-align: left;
+    vertical-align:middle;
+  }
+  
+  .item:nth-child(even) .picture{
+    left: 50%;
+    padding-left: 1rem;
+  }
+  
+  .item:nth-child(even) .picture img{
+    float:left;
+  }
+  
+  .item:nth-child(even) .description{
+    right: 50%;
+    text-align: right;
+  }
+  
   /* flex three columns */
   .flex-col-3{
     width: calc(100%/3 - (1rem * .67));
@@ -801,13 +982,30 @@ footer div p.caption{
   .flipable-pic-bottom{
     display: none; 
   }
+  
+  /* limit size of content area */
+  .container{
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .container-half{
+    max-width: 480px;
+    margin: 0 auto;
+  }
 
 }
 
-/* ================ 1280px Break Point 3: Medium-large ================ */
-@media screen and (min-width: 80em) { 
 
+
+/* ==================================================================== */
+/* ================ Break Point 3: Medium-large (1280px) ============== */
+/* ==================================================================== */
+
+@media screen and (min-width: 80em) { 
+  
   /* limit size of content area */
+  /*
   .container{
     max-width: 1280px;
     margin: 0 auto;
@@ -817,12 +1015,17 @@ footer div p.caption{
     max-width: 640px;
     margin: 0 auto;
   }
+  */
 
 }
 
-/* ================ 1440px Break Point 4: Medium-large ================ */
-@media screen and (min-width: 90em) { 
 
+/* ==================================================================== */
+/* ================ Break Point 4: Medium-large (1440px) ============== */
+/* ==================================================================== */
+
+@media screen and (min-width: 90em) { 
+  
   /* hide hamburger menu */
   #drawer-toggle-label{
     display: none;
@@ -842,9 +1045,13 @@ footer div p.caption{
 
 }
 
-/* =============== 1600px Break Point 5: Extra large =============== */
-@media screen and (min-width: 100em) {
 
+/* ==================================================================== */
+/* =============== Break Point 5: Extra large (1600px) ================ */
+/* ==================================================================== */
+
+@media screen and (min-width: 100em) {
+  
   /* limit size of content area */
   .container{
     max-width: 1280px;
@@ -858,9 +1065,13 @@ footer div p.caption{
 
 }
 
-/* ================ 1920px Break Point 6: extra-large ================ */
-@media screen and (min-width: 120em) {
 
+/* ==================================================================== */
+/* ================ Break Point 6: extra-large (1920px) =============== */
+/* ==================================================================== */
+
+@media screen and (min-width: 120em) {
+  
   /* limit size of content area */
   .container{
     max-width: 1600px;
@@ -871,5 +1082,5 @@ footer div p.caption{
     max-width: 800px;
     margin: 0 auto;
   }
-
+  
 }

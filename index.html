@@ -13,12 +13,13 @@
     <link rel="stylesheet" media="screen" href="css/resets.css" />
     <link rel="stylesheet" media="screen" href="css/screen.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./js/js_contact.js"></script>
   </head>
   <body>
     <div class="wrapper">
       <!-- START NAVIGATION -->
       <nav>
-        <div class="container">
+        <div class="container" id="home">
           <!-- hamburger menu -->
           <input type="checkbox" id="drawer-toggle" name="drawer-toggle">
           <label for="drawer-toggle" id="drawer-toggle-label" class="menubtn left"><i class="fa fa-bars button specialbtn"></i></label>
@@ -29,10 +30,10 @@
             </ul>
             <ul class="draweritemlist padtopbottom">
               <li><p class="drawertitlebtn">Main pages</p></li>
-              <li><a class="body2 drawerbtn" href="index.html">Home</a></li>
-              <li><a class="body2 drawerbtn" href="bio.html">Bio</a></li>
-              <li><a class="body2 drawerbtn" href="projects.html">Projects</a></li>
-              <li><a class="body2 drawerbtn" href="contact.html">Contact</a></li>
+              <li><a class="body2 drawerbtn" href="#home">Home</a></li>
+              <li><a class="body2 drawerbtn" href="#bio">Bio</a></li>
+              <li><a class="body2 drawerbtn" href="#projects">Projects</a></li>
+              <li><a class="body2 drawerbtn" href="#contact">Contact</a></li>
             </ul>
           </aside>
           <!-- END DRAWER -->
@@ -40,30 +41,391 @@
           <a id="logo" class="menubtn button left" href="index.html">ʕ–ᴥ–ʔ Portfolio</a>
           <!-- nav menu items -->
           <ul id="topnavitemlist" class="navitemlist">
-            <li><a class="button menubtn active" href="index.html">Home</a></li>
-            <li><a class="button menubtn" href="bio.html">Bio</a></li>
-            <li><a class="button menubtn" href="projects.html">Projects</a></li>
-            <li><a class="button menubtn" href="contact.html">Contact</a></li>
+            <li><a class="button menubtn active" href="#home">Home</a></li>
+            <li><a class="button menubtn" href="#bio">Bio</a></li>
+            <li><a class="button menubtn" href="#projects">Projects</a></li>
+            <li><a class="button menubtn" href="#contact">Contact</a></li>
           </ul>
         </div>
       </nav>
       <!-- END NAVIGATION -->
       <!-- START MAIN -->
       <main>
-        <!-- section 1 -->
-        <section class="white homepage alignmiddle">
-          <div class="container frame aligncenter">
-            <h4 class="">Jacob Huebner</h4>
-            <h3 class="">Helpdesk Coordinator</h3>
-          </div>
-        <!-- section 1 scene -->
-          <div class="scene">
+        <!----------------------------------------->
+        <!----------------------------------------->
+        <!---------------HOMEPAGE------------------>
+        <!----------------------------------------->
+        <!----------------------------------------->
+        <article class="homepage alignmiddle">
+          <section class="container frame">
+            <!-- name -->
+            <div class="aligncenter">
+              <h4 class="">Jacob Huebner</h4>
+              <h3 class="">Helpdesk Coordinator</h3>
+            </div>
+            <!-- bg -->
+            <div class="scene">
               <canvas class="scene-canvas-1"></canvas>
+            </div>
+          </section>
+        </article>
+        <!----------------------------------------->
+        <!----------------------------------------->
+        <!------------------BIO-------------------->
+        <!----------------------------------------->
+        <!----------------------------------------->
+        <article class="lightgrey item-list" id="bio">
+          <!-- title -->
+          <div class="title container frame">
+            <h2 class="margin">Bio</h2>
           </div>
-        </section>
-        <!-- section 2 -->
-        <section class="white peak">
-        </section>
+          <!-- section 1 -->
+          <section class="item container frame">
+            <!-- picture -->
+            <div class="picture">
+              <a href="https://www.comptia.org/">
+                <img src="img/bio_COMPTIA3.jpg" alt="Image">
+              </a>
+            </div>
+            <!-- words -->
+            <div class="description">
+              <h4 class="margintop">CompTIA</h4>
+              <p>Worked at CompTIA for 3 years.</p>
+            </div>
+          </section>
+          <!-- section 2 -->
+          <section class="item container frame">
+            <!-- picture -->
+            <div class="picture">
+              <a href="">
+                <img class="https://web.iit.edu" src="img/bio_IIT2.jpg" alt="Image">
+              </a>
+            </div>
+            <!-- words -->
+            <div class="description">
+              <h4 class="margintop">Illinois Institute of Technology</h4>
+              <p>Studied Information Technology and Management.</p>
+            </div>
+          </section>
+          <!-- section 3 -->
+          <section class="item container frame">
+            <!-- picture -->
+            <div class="picture">
+              <a href="https://cod.edu">
+                <img class="" src="img/bio_COD.jpg" alt="Image">
+              </a>
+            </div>
+            <!-- words -->
+            <div class="description">
+              <h4 class="margintop">College of Dupage</h4>
+              <p>Studied Computer and Internetworking Technologies.</p>
+            </div>
+          </section>
+        </article>
+        <!----------------------------------------->
+        <!----------------------------------------->
+        <!---------------Projects------------------>
+        <!----------------------------------------->
+        <!----------------------------------------->
+        <article class="grey item-list" id="project_showcase">
+          <!-- title -->
+          <div class="title container frame">
+            <h2 class="margin">Projects</h2>
+          </div>
+          <!--------------->
+          <!-- project 1 -->
+          <!--------------->
+          <section class="item container frame">
+            <!-- picture -->
+            <div class="picture">
+              <a href="pdf/Network_Upgrade_Proposal.pdf">
+                <img src="img/project11.png" alt="Image">
+              </a>
+            </div>
+            <!-- words -->
+            <div class="description">
+              <h3 class="margintop">Network Upgrade Proposal</h3>
+              <p class="margin">Planned a complete network upgrade proposal for an office of 100 employees with a budget of $75,000.</p>
+            </div>
+          </section>
+          <!--------------->
+          <!-- project 2 -->
+          <!--------------->
+          <section class="item container frame">
+            <!-- picture -->
+            <div class="picture">
+              <a href="https://www.youtube.com/watch?v=Sk8N2cBMlVk">
+                <img src="img/project1.png" alt="Image">
+              </a>
+            </div>
+            <!-- words -->
+            <div class="description">
+              <h3 class="margintop">CommuteIT App</h3>
+              <p class="margin">I lead a team of 7 students to design an app for commuters for the 2018 Illinois Tech Innovation Challenge.</p>
+            </div>
+          </section>
+          <!--------------->
+          <!-- project 3 -->
+          <!--------------->
+          <section class="item container frame">
+            <!-- picture -->
+            <div class="picture">
+              <a href="https://carelessspiders.github.io/itmd362-spring2019-project2/">
+                <img class="" src="img/project2.png" alt="Image">
+              </a>
+            </div>
+            <!-- words -->
+            <div class="description">
+              <h3 class="margintop">Team Website Redesign</h3>
+              <p class="margin">I lead a team of 3 students to design a professional website over the course of the semester using GitHub and Basecamp.</p>
+            </div>
+          </section>
+          <!--------------->
+          <!-- project 4 -->
+          <!--------------->
+          <section class="item container frame">
+            <!-- picture -->
+            <div class="picture">
+              <a href="https://www.youtube.com/watch?v=AX1QnLYC_o0">
+                <img class="" src="img/project3.png" alt="Image">
+              </a>
+            </div>
+            <!-- words -->
+            <div class="description">
+              <h3 class="margintop">HuebDesk</h3>
+              <p class="margin">I created a fully functional help desk application called Huebdesk. HuebDesk is a help desk application written in Java and includes fully functional database operations.</p>
+            </div>
+          </section>
+        </article>
+        <!----------------------------------------->
+        <!----------------------------------------->
+        <!-------------Project Grid---------------->
+        <!----------------------------------------->
+        <!----------------------------------------->
+        <article class="darkgrey" id="projects">
+          <!-- title -->
+          <div class="title container frame">
+            <h2 class="margin" >All Projects</h2>
+          </div>
+          <!------------------>
+          <!-- project grid -->
+          <!------------------>
+          <section class="flex container frame">
+            
+            <!-- project item 18 -->
+            <div class="flex-col-3 grey dropshadow1">
+              <a class="project-item" href="projects/project_item_11.html">
+                <div class="project-item-content">
+                  <h4>LakeSense</h4>
+                  <p>I helped lead a team of 6 students to design an affordable network of buoys for detecting algae blooms.</p>
+                </div>
+                <img class="" src="img/projectthumb1.png" alt="Image">
+              </a>
+            </div>
+            
+            <!-- project item 17 -->
+            <div class="flex-col-3 grey dropshadow1">
+              <a class="project-item" href="projects/project_item_11.html">
+                <div class="project-item-content">
+                  <h4>System Integration Project</h4>
+                  <p>I lead a team of 5 students to design, construct, integrate, and implement an information system as a solution to a business problem. The team designed an application for content creators to monitor uncredited publications of their content on the social media platform Instagram.</p>
+                </div>
+                <img class="" src="img/projectthumb1.png" alt="Image">
+              </a>
+            </div>
+            
+            <!-- project item 16 -->
+            <div class="flex-col-3 grey dropshadow1">
+              <a class="project-item" href="projects/project_item_11.html">
+                <div class="project-item-content">
+                  <h4>IT Infrastructure Proposal</h4>
+                  <p>I lead a team of 5 students to create an IT infrastructure proposal for a company of 60 employees across 7 locations around Chicago. The cost was estimated at $985,000.</p>
+                </div>
+                <img class="" src="img/projectthumb1.png" alt="Image">
+              </a>
+            </div>
+            
+            <!-- project item 15 -->
+            <div class="flex-col-3 grey dropshadow1">
+              <a class="project-item" href="projects/project_item_11.html">
+                <div class="project-item-content">
+                  <h4>JAWS</h4>
+                  <p>I lead a team of 6 students to design a buoy for detecting algae blooms. The team outperformed 130 other teams and was top 5 in the division.</p>
+                </div>
+                <img class="" src="img/projectthumb1.png" alt="Image">
+              </a>
+            </div>
+            
+            <!-- project item 14 -->
+            <div class="flex-col-3 grey dropshadow1">
+              <a class="project-item" href="projects/project_item_11.html">
+                <div class="project-item-content">
+                  <h4>Open-Source Intelligence Application</h4>
+                  <p>I lead a team of 9 students to create an OSINT Application that collects intelligence from social media and generates a report. Role: Lead Project Manager</p>
+                </div>
+                <img class="" src="img/projectthumb1.png" alt="Image">
+              </a>
+            </div>
+            
+            <!-- project item 11 -->
+            <div class="flex-col-3 grey dropshadow1">
+              <a class="project-item" href="projects/project_item_11.html">
+                <div class="project-item-content">
+                  <h4>Network Upgrade Proposal</h4>
+                  <p>I planned a complete network upgrade proposal for an office of 100 employees with a budget of $75,000.</p>
+                </div>
+                <img class="" src="img/projectthumb11.png" alt="Image">
+              </a>
+            </div>
+            <!-- project item 12 -->
+            <div class="flex-col-3 grey dropshadow1">
+              <a class="project-item" href="projects/project_item_12.html">
+                <div class="project-item-content">
+                  <h4>Dream Journal App</h4>
+                  <p>I designed an app that would help people remember their dreams.</p>
+                </div>
+                <img class="" src="img/projectthumb12.png" alt="Image">
+              </a>
+            </div>
+            <!-- project item 13 -->
+            <div class="flex-col-3 grey dropshadow1">
+              <a class="project-item" href="projects/project_item_13.html">
+                <div class="project-item-content">
+                  <h4>Contact Page</h4>
+                  <p>I designed a contact form for this site that sends messages to my email. The app was built using Amazon Web Services.</p>
+                </div>
+                <img class="" src="img/projectthumb13.png" alt="Image">
+              </a>
+            </div>            
+            <!-- project item 1 -->
+            <div class="flex-col-3 grey dropshadow1">
+              <a class="project-item" href="projects/project_item_1.html">
+                <div class="project-item-content">
+                  <h4>HuebDesk App</h4>
+                  <p>I created a fully functional help desk application called Huebdesk. HuebDesk is a help desk application written in Java and includes fully functional database operations.</p>
+                </div>
+                <img class="" src="img/projectthumb1.png" alt="Image">
+              </a>
+            </div>
+            <!-- project item 2 -->
+            <div class="flex-col-3 grey dropshadow1">
+              <a class="project-item" href="projects/project_item_2.html">
+                <div class="project-item-content">
+                  <h4>Team Website Redesign</h4>
+                  <p>I lead a team of 3 students to design a professional website over the course of the semester using GitHub and Basecamp.</p>
+                </div>
+                <img class="" src="img/projectthumb2.png" alt="Image">
+              </a>
+            </div>
+            <!-- project item 3 -->
+            <div class="flex-col-3 grey dropshadow1">
+              <a class="project-item" href="projects/project_item_3.html">
+                <div class="project-item-content">
+                  <h4>CommuteIT App</h4>
+                  <p>I lead a team of 7 students to design an app for commuters for the 2018 Illinois Tech Innovation Challenge.</p>
+                </div>
+                <img class="" src="img/projectthumb3.png" alt="Image">
+              </a>
+            </div>
+            <!-- project item 4 -->
+            <div class="flex-col-3 grey dropshadow1">
+              <a class="project-item" href="projects/project_item_4.html">
+                <div class="project-item-content">
+                  <h4>This Website</h4>
+                  <p>I made this beautiful website from scratch! 100% original code.</p>
+                </div>
+                <img class="" src="img/projectthumb4.png" alt="Image">
+              </a>
+            </div>
+            <!-- project item 6 -->
+            <div class="flex-col-3 grey dropshadow1">
+              <a class="project-item" href="projects/project_item_6.html">
+                <div class="project-item-content">
+                  <h4>Lackrack</h4>
+                  <p>I built my own personal home server and a DIY server rack using an IKEA table and some old networking equipment.</p>
+                </div>
+                <img class="" src="img/projectthumb6.png" alt="Image">
+              </a>
+            </div>
+            <!-- project item 7 -->
+            <div class="flex-col-3 grey dropshadow1">
+              <a class="project-item" href="projects/project_item_7.html">
+                <div class="project-item-content">
+                  <h4>Azure Home VPN</h4>
+                  <p>I built my own personal VPN using Microsoft's cloud infrastructure "Azure".</p>
+                </div>
+                <img class="" src="img/projectthumb7.jpg" alt="Image">
+              </a>
+            </div>
+            <!-- project item 8 -->
+            <div class="flex-col-3 grey dropshadow1">
+              <a class="project-item" href="projects/project_item_8.html">
+                <div class="project-item-content">
+                  <h4>Portable VR PC</h4>
+                  <p>I built a PC for virtual reality use. It was designed to meet the high workloads while being portable enough to take to conferences.</p>
+                </div>
+                <img class="" src="img/projectthumb8.jpg" alt="Image">
+              </a>
+            </div>
+            <!-- project item 9 -->
+            <div class="flex-col-3 grey dropshadow1">
+              <a class="project-item" href="projects/project_item_9.html">
+                <div class="project-item-content">
+                  <h4>VOIP Phone System</h4>
+                  <p>I built a fully functional VOIP phone system that was designed to mimic a real company.</p>
+                </div>
+                <img class="" src="img/projectthumb9png.png" alt="Image">
+              </a>
+            </div>
+            <!-- project item 10 -->
+            <div class="flex-col-3 grey dropshadow1">
+              <a class="project-item" href="projects/project_item_10.html">
+                <div class="project-item-content">
+                  <h4>IT Capstone</h4>
+                  <p>I worked on a team of 3 to build a fully functional network with the same functionality of a real business network.</p>
+                </div>
+                <img class="" src="img/projectthumb10.png" alt="Image">
+              </a>
+            </div>
+          </section>
+        </article>
+        <!----------------------------------------->
+        <!----------------------------------------->
+        <!---------------Contact------------------->
+        <!----------------------------------------->
+        <!----------------------------------------->
+        <article class="" id="contact">
+          <section class="lightgray">
+            <div class="container frame aligncenter">
+              <!-- title -->
+              <div class="title container frame">
+                <h2 class="margin">Contact</h2>
+              </div>
+              <!-- social media links -->
+              <a class="clean padleftright" href="https://linkedin.com/in/jacobhuebner"><h1 class="inline linkedin"><i class="fab fa-linkedin"></i></h1></a>
+              <a class="clean padleftright" href="https://github.com/JakerHuber"><h1 class="inline github"><i class="fab fa-github-square"></i></h1></a>
+              <a class="clean padleftright" href="mailto:jhuebner@hawk.iit.edu"><h1 class="inline mailto"><i class="fas fa-envelope-square"></i></h1></a>
+              <!-- contact form -->
+              <div class="frame center medium-item">
+                <div class="container frame">
+                  <!-- form begin -->
+                  <!-- enctype="text/plain" -->
+                  <form id="contact-form" method="post" onsubmit="submitToAPI(event)" autocomplete="on">
+                    <p class="margin aligncenter">You can send me a message by filling out the boxes below.</p>
+                    <ol>
+                      <li class="padvertical"><input type="text" name="name-input" id="name-input" class="formitem" placeholder="Name" required></li>
+                      <li class="padvertical"><input type="phone" name="phone-input" id="phone-input" class="formitem" placeholder="Phone number"></li>
+                      <li class="padvertical"><input type="email" name="email-input" id="email-input" class="formitem" pattern="^.+@.+$" placeholder="Email address" required></li>
+                      <li class="padvertical"><textarea name="description-input" id="description-input" class="formitem" rows="4" cols="50" maxlength="500" placeholder="Message here..."  wrap="hard" required></textarea></li>
+                      <li class="padvertical"><input type="submit" name="submit" id="submit" class="button formitem" value="Send Message"></li>
+                    </ol>
+                  </form>
+                  <!-- form end -->
+                </div>
+              </div>
+            </div>
+          </section>     
+        </article>
       </main>
       <!-- END MAIN -->
       <!-- START FOOTER -->
