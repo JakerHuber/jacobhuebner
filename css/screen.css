@@ -731,14 +731,15 @@ footer div p.caption{
 /* ============================ Bio page ============================== */
 /* ==================================================================== */
 
+/*
 .item-list{
-  text-align: center;
 }
 
 .item{
   display: block;
   width: 100%;
   min-width: calc(360px - 4rem);
+  margin-bottom: 2rem;
 }
 
 .item .picture{
@@ -746,12 +747,12 @@ footer div p.caption{
   vertical-align: middle;
   width: calc(100%/1 - (1rem * .50));
   position: relative;
-  max-width: 430px;
 }
 
 .item .picture img{
   vertical-align: middle;
   min-width: 270px;
+  border: 6px solid #fff;
 }
 
 .item .description{
@@ -759,11 +760,81 @@ footer div p.caption{
   vertical-align: middle;
   width: calc(100%/1 - (1rem * .50));
   padding-left: 0rem;
-  text-align: center;
-  margin-top: -36px;
   position: relative;
+  margin-top: -36px;
 }
 
+.item .description h4, .item .description p{
+  max-width: 350px;
+  float: right;
+  
+}
+*/
+
+.item{
+  display: block;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.item .picture{
+  display: inline-block;
+  width: calc(100%/2 - (1rem * .50));
+  position: relative;
+  vertical-align: middle;
+  min-width: 270px;
+  padding-left: 0rem;
+  padding-right: 1rem;
+}
+
+.item .picture img{
+  border: 6px solid #fff;
+}
+
+.item .description{
+  display: inline-block;
+  width: calc(100%/2 - (1rem * .50));
+  position: relative;
+  vertical-align: middle;
+  text-align: left;
+  min-width: 270px;
+  padding-left: 1rem;
+  padding-right: 0rem;
+}
+
+.item .description h4, .item .description p{
+  max-width: 350px;
+}
+
+.item:nth-child(even) .description h4, .item:nth-child(even) .description p{
+  clear: both;
+  float: right;
+}
+
+.item:nth-child(odd) .description h4, .item:nth-child(odd) .description p{
+  clear: both;
+  float: left;
+}
+
+.item:nth-child(even) .picture{
+  left: 50%;
+  padding-left: 1rem;
+  padding-right: 0rem;
+}
+
+.item:nth-child(even) .description{
+  right: 50%;
+  text-align: right;
+  padding-left: 0rem;
+  padding-right: 1rem;
+}
+
+.item .description h4.margintop{
+  margin: 0 0 0 0 !important;
+}
 
 /* ==================================================================== */
 /* ============================ Project page ========================== */
@@ -956,28 +1027,25 @@ footer div p.caption{
 
 
 /* ==================================================================== */
-/* ================ Break Point 2: Medium (960px) (60em) ===================== */
+/* ================ Break Point 2: Extra small (600px) ================ */
 /* ==================================================================== */
-
-@media screen and (min-width: 60em) {
+@media screen and (min-width: 51.75em) {
   
-  /* flex three columns */
-  .flex-col-3{
-    width: calc(100%/3 - 1rem);
-  }
-
+  
   /* items */
+  
+  /*
   .item .picture{
     display: inline-block;
     width: calc(100%/2 - (1rem * .50));
     vertical-align: middle;
     max-width: none;
+    padding-right: 1rem;
   }
 
   .item .picture img{
     float: right;
     vertical-align: middle;
-    max-width: 430px;
   }
 
   .item .description{
@@ -991,6 +1059,7 @@ footer div p.caption{
   .item:nth-child(even) .picture{
     left: 50%;
     padding-left: 1rem;
+    padding-right: 0rem;
   }
   
   .item:nth-child(even) .picture img{
@@ -1000,7 +1069,29 @@ footer div p.caption{
   .item:nth-child(even) .description{
     right: 50%;
     text-align: right;
+    padding-left: 0rem;
+    padding-right: 1rem;
   }
+  */
+  
+
+  
+  
+}
+
+
+/* ==================================================================== */
+/* ================ Break Point 3: Medium (960px) (60em) ===================== */
+/* ==================================================================== */
+
+@media screen and (min-width: 60em) {
+  
+  /* flex three columns */
+  .flex-col-3{
+    width: calc(100%/3 - 1rem);
+  }
+
+  
   
   /* flippable picture top */
   .flipable-pic-top{
@@ -1028,7 +1119,7 @@ footer div p.caption{
 
 
 /* ==================================================================== */
-/* ================ Break Point 3: Medium-large (1280px) ============== */
+/* ================ Break Point 4: Medium-large (1280px) ============== */
 /* ==================================================================== */
 
 @media screen and (min-width: 80em) { 
@@ -1050,7 +1141,7 @@ footer div p.caption{
 
 
 /* ==================================================================== */
-/* ================ Break Point 4: Medium-large (1440px) ============== */
+/* ================ Break Point 5: Medium-large (1440px) ============== */
 /* ==================================================================== */
 
 @media screen and (min-width: 90em) { 
@@ -1076,7 +1167,7 @@ footer div p.caption{
 
 
 /* ==================================================================== */
-/* =============== Break Point 5: Extra large (1600px) ================ */
+/* =============== Break Point 6: Extra large (1600px) ================ */
 /* ==================================================================== */
 
 @media screen and (min-width: 100em) {
@@ -1097,7 +1188,7 @@ footer div p.caption{
 
 
 /* ==================================================================== */
-/* ================ Break Point 6: extra-large (1920px) =============== */
+/* ================ Break Point 7: extra-large (1920px) =============== */
 /* ==================================================================== */
 
 @media screen and (min-width: 120em) {
