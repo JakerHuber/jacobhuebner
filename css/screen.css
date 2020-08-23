@@ -825,6 +825,27 @@ footer div p.caption{
   max-height: 500px;
 }
 
+/* project item expand */
+.flex-col-3:focus-within{
+  min-width: 100%;
+}
+
+.flex-col-3:focus-within .project-item-content{
+  min-width: 100%;
+}
+
+.flex-col-3:focus-within .project-item-content:focus{
+  background-color: rgba(50,50,50,0.0);
+  opacity: 1;
+  top: 0%;
+  text-align: center;
+  display: flex;
+  flex-flow:column;
+  justify-content:flex-end;
+}
+
+
+
 
 /* ==================================================================== */
 /* ============================ Contact page ========================== */
