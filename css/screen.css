@@ -769,6 +769,14 @@ footer div p.caption{
 /* ============================ Project page ========================== */
 /* ==================================================================== */
 
+.hide-me{
+  display: none;
+}
+
+.show-me{
+  display: block;
+}
+
 /* project grid */
 .flex{
   width: 100%;
@@ -785,8 +793,10 @@ footer div p.caption{
 .flex-col-3{
   position: relative;
   overflow: hidden;
-  width: 100%;
+  max-width: calc(100% - 1rem);
   margin-bottom: 1rem;
+  margin-left:  calc(1rem / 2);
+  margin-right: calc(1rem / 2);
 }
 
 /* only adds bottom margin if there are more than 3 items */
@@ -797,15 +807,20 @@ footer div p.caption{
 /* slide down description */
 .project-item-content{
   position: absolute;
-  overflow: scroll;
+  overflow:scroll;
   overflow-x: hidden;
   height: 100%;
+  width: 100%;
   padding: 1rem;
   color: white;
   background-color: rgba(50,50,50,0.9);
   transition-duration: .5s;
   opacity: 0;
   top: -100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items:center;
 }
 
 .flex-col-3:hover .project-item-content{
@@ -820,29 +835,38 @@ footer div p.caption{
 }
 
 /* max height for img */
-.maxheight{
-  width: auto;
-  max-height: 500px;
-}
+
 
 /* project item expand */
 .flex-col-3:focus-within{
-  min-width: 100%;
+  min-width: calc(100% - 1rem);
 }
 
 .flex-col-3:focus-within .project-item-content{
-  min-width: 100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items:center;
 }
 
 .flex-col-3:focus-within .project-item-content:focus{
-  background-color: rgba(50,50,50,0.0);
+  background-color: rgba(50,50,50,0.9);
   opacity: 1;
   top: 0%;
   text-align: center;
-  display: flex;
-  flex-flow:column;
-  justify-content:flex-end;
 }
+
+.flex-col-3:focus-within .project-item-content:focus .hide-me{
+    display: block;
+}
+
+.flex-col-3:focus-within .project-item-content:focus .show-me{
+    display: none;
+}
+
+
 
 
 
@@ -910,22 +934,16 @@ footer div p.caption{
 
 @media screen and (min-width: 38.2em) { 
   
+  /* flex two columns */
+  .flex-col-3{
+    width: calc(50% - 1rem);
+  }
+  
   /* Navigation items */
   .navitemlist{
     clear: none;
     text-align: right;
     display: block;
-  }
-  
-  /* Flex grid resize */
-  /* flex three columns */
-  .flex-col-3{
-    width: calc(100%/2 - (1rem * .5));
-  }
-
-  /* vertical gutter */
-  .flex-col-3:nth-child(odd){
-    margin-right: 1rem;
   }
   
   /* Home page resize */
@@ -943,6 +961,11 @@ footer div p.caption{
 
 @media screen and (min-width: 60em) {
   
+  /* flex three columns */
+  .flex-col-3{
+    width: calc(100%/3 - 1rem);
+  }
+
   /* items */
   .item .picture{
     display: inline-block;
@@ -977,21 +1000,6 @@ footer div p.caption{
   .item:nth-child(even) .description{
     right: 50%;
     text-align: right;
-  }
-  
-  /* flex three columns */
-  .flex-col-3{
-    width: calc(100%/3 - (1rem * .67));
-  }
-
-  /* remove old vertical gutter */
-  .flex-col-3:nth-child(odd){
-    margin-right: 0rem;
-  }
-
-  /* vertical gutter */
-  .flex-col-3:not(:nth-child(3n)){
-    margin-right: 1rem;
   }
   
   /* flippable picture top */
