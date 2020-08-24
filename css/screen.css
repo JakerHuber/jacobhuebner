@@ -734,6 +734,7 @@ footer div p.caption{
 .item{
   display: block;
   width: 100%;
+  height: auto;
   flex-direction: column;
   justify-content: center;
   margin-top: 1rem;
@@ -752,7 +753,9 @@ footer div p.caption{
 }
 
 .item .picture img{
+  object-fit: contain;
   border: 6px solid #fff;
+  max-height: calc(50vh - 2rem);
 }
 
 .item .description{
@@ -775,6 +778,16 @@ footer div p.caption{
   margin: 0.5rem 0 0 0 !important;
 }
 
+/* item hidden elements toggle */
+.hide-me{
+  display: none !important;
+}
+
+.show-me{
+  display: block !important;
+}
+
+
 
 
 
@@ -788,13 +801,6 @@ footer div p.caption{
 /* ============================ Project page ========================== */
 /* ==================================================================== */
 
-.hide-me{
-  display: none;
-}
-
-.show-me{
-  display: block;
-}
 
 /* project grid */
 .flex{
@@ -816,6 +822,7 @@ footer div p.caption{
   margin-bottom: 1rem;
   margin-left:  calc(1rem / 2);
   margin-right: calc(1rem / 2);
+  max-height: 50vh;
 }
 
 /* only adds bottom margin if there are more than 3 items */
@@ -875,14 +882,15 @@ footer div p.caption{
   opacity: 1;
   top: 0%;
   text-align: center;
+  
 }
 
 .flex-col-3:focus-within .project-item-content:focus .hide-me{
-    display: block;
+    display: block !important;
 }
 
 .flex-col-3:focus-within .project-item-content:focus .show-me{
-    display: none;
+    display: none !important;
 }
 
 
