@@ -747,16 +747,17 @@ footer div p.caption{
   width: calc(100%/1 - (1rem * .50));
   position: relative;
   vertical-align: middle;
-  /*
   padding-left: 0rem;
   padding-right: 0rem;
-  */
+  max-width: 500px;
 }
 
 .item .picture img{
-  object-fit: contain;
   border: 6px solid #fff;
-  max-height: calc(40vh - 2rem);
+}
+
+.no-border{
+  border: none !important;
 }
 
 .item .description{
@@ -765,10 +766,8 @@ footer div p.caption{
   position: relative;
   vertical-align: middle;
   text-align: center;
-  /*
-  padding-left: 1rem;
+  padding-left: 0rem;
   padding-right: 0rem;
-  */
   width: auto;
 }
 
@@ -787,11 +786,6 @@ footer div p.caption{
 
 .show-me{
   display: block !important;
-}
-
-/* resizing */
-.item .picture{
-  max-width: 400px;
 }
 
 
@@ -827,8 +821,15 @@ footer div p.caption{
   margin-bottom: 1rem;
   margin-left:  calc(1rem / 2);
   margin-right: calc(1rem / 2);
-  max-height: 50vh;
+  max-height: 60vh;
   min-width: 218px;
+  /* resize */
+}
+
+/* small size grid */
+.flex-col-3 .thumbnail{
+  max-height: 20vh;
+  object-fit: cover;
 }
 
 /* only adds bottom margin if there are more than 3 items */
@@ -872,12 +873,12 @@ footer div p.caption{
 /* project item expand */
 .flex-col-3:focus-within{
   min-width: calc(100% - 1rem);
-  height: 50vh;
+  height: 60vh;
 }
 
 .flex-col-3:focus-within .thumbnail{
   object-fit:cover;
-  height: 50vh;
+  height: 60vh;
 }
 
 .flex-col-3:focus-within .project-item-content{
@@ -979,6 +980,11 @@ footer div p.caption{
     width: calc(50% - 1rem);
   }
   
+  /* small size grid */
+  .flex-col-3 .thumbnail{
+    max-height: none;
+  }
+  
   /* Navigation items */
   .navitemlist{
     clear: none;
@@ -1012,21 +1018,20 @@ footer div p.caption{
 
   .item .picture{
     display: inline-block;
-    width: calc(100%/2 - (1rem * .50));
-    position: relative;
-    vertical-align: middle;
-    min-width: 270px;
+    width: calc(100%/2 - (1rem * .13));
+    overflow: hidden;
     padding-left: 0rem;
     padding-right: 1rem;
   }
-
-  .item .picture img{
-    border: 6px solid #fff;
+  
+  .item .picture .img{
+    width: 100%;
+    object-fit: cover;
   }
 
   .item .description{
     display: inline-block;
-    width: calc(100%/2 - (1rem * .50));
+    width: calc(100%/2 - (1rem * .13));
     position: relative;
     vertical-align: middle;
     text-align: left;
@@ -1078,9 +1083,13 @@ footer div p.caption{
   /* flex three columns */
   .flex-col-3{
     width: calc(100%/3 - 1rem);
+    height: none;
   }
 
-  
+  /* small size grid */
+  .flex-col-3 .thumbnail{
+    max-height: none;
+  }
   
   /* flippable picture top */
   .flipable-pic-top{
@@ -1101,6 +1110,10 @@ footer div p.caption{
   .container-half{
     max-width: 480px;
     margin: 0 auto;
+  }
+  
+  .item .picture{
+    max-width: none;
   }
 
 }
