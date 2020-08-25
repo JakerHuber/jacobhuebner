@@ -16,31 +16,19 @@ Table of Contents:
 */
 
 /* ==================================================================== */
-/* ==================================================================== */
-/* ==================================================================== */
-/* ==================================================================== */
 /* ====================== Part 1: Core HTML  ========================== */
 /* ==================================================================== */
-/* ==================================================================== */
-/* ==================================================================== */
-/* ==================================================================== */
 
-
-
-
-/* ==================================================================== */
-/* ====================  HTML Structure =============================== */
-/* ==================================================================== */
-
+/* ======== HTML Structure ======== */
 *, *:before, *:after{
   box-sizing: inherit;
 }
 
-html {
+html{
   box-sizing: border-box; /* Note: Using border-box instead of content-box */
 }
 
-body {
+body{
   font-family: 'Roboto', 'Open Sans', 'Lato', 'Oswald', sans-serif;
   font-size: 1em; /* 16px Base font size */
   line-height: 1.5em; /* 24px = 18px * 1.334em - Base line height */
@@ -55,13 +43,9 @@ nav{
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
-main {
+main{
   width: 100%;
   overflow: hidden;
-}
-
-section{
-
 }
 
 article{
@@ -98,40 +82,26 @@ footer{
 }
 
 
-/* ==================================================================== */
-/* ====================  Responsive media ============================= */
-/* ==================================================================== */
-
-img, audio, video {
+/* ======== Responsive media ======== */
+img, audio, video{
   display: block;
   max-width: 100%;
 }
 
-img {
+img{
   margin: 0 auto;      
 }
 
 
 
 
-/* ==================================================================== */
-/* ==================================================================== */
-/* ==================================================================== */
+
 /* ==================================================================== */
 /* ====================== Part 2: Core resources  ===================== */
 /* ==================================================================== */
-/* ==================================================================== */
-/* ==================================================================== */
-/* ==================================================================== */
 
-
-
-
-/* ==================================================================== */
-/* =====================  Scaled fonts ================================ */
-/* ==================================================================== */
-
-h1 {
+/* ======== Scaled fonts  ======== */
+h1{
   font-size: 6em; /* 96px = 16px * 6em */
   line-height: 6rem; /* 96px = 16px * 6em */
   font-weight: 300; /* light */
@@ -147,7 +117,7 @@ h1.margintop{
   margin: 0.83em 0 0 0;
 }
 
-h2 {
+h2{
   font-size: 3.75em; /* 60px = 16px * 3.75em */
   line-height: 3.75rem;  /* 60px = 16px * 3.75em */
   font-weight: 300; /* light */
@@ -162,7 +132,7 @@ h2.margintop{
   margin: 0.83em 0 0 0;
 }
 
-h3 {
+h3{
   font-size: 3em; /* 48px = 16px * 3em */
   line-height: 3.125rem;  /* 50px = 16px * 3.125em */
   font-weight: 400; /* regular */
@@ -181,7 +151,7 @@ h3.light{
   font-weight: 300;
 }
 
-h4 {
+h4{
   font-size: 2.125em; /* 34px = 34px * 2.125em */
   line-height: 2.5rem;  /* 40px = 16px * 2.5em */
   font-weight: 400; /* regular */
@@ -196,7 +166,7 @@ h4.margintop{
   margin: 1.33em 0 0 0;
 }
 
-h5 {
+h5{
   font-size: 1.5em; /* 24px = 16px * 1.5em */
   line-height: 2rem;  /* 32px = 16px * 2em */
   font-weight: 400; /* regular */
@@ -211,7 +181,7 @@ h5.margintop{
   margin: 1.67em 0 0 0;
 }
 
-h6 {
+h6{
   font-size: 1.125em; /* 20px = 16px * 1.125em */
   line-height: 2.5rem;  /* 40px = 16px * 2.5em */
   font-weight: 500; /* medium */
@@ -226,7 +196,7 @@ h6.margintop{
   margin: 2.33em 0 0 0;
 }
 
-p {
+p{
   font-size: 1em; /* 16px = 16px * 1em */
   line-height: 1.5em; /* 24px = 16px * 1.5em */
   font-weight: 400; /* regular */
@@ -241,14 +211,14 @@ p.margintop{
   margin: 1em 0 0 0;
 }
 
-.body2 {
+.body2{
   font-size: .875em; /* 14px = 16px * .875em */
   line-height: 1.25rem; /* 20px = 16px * 1.25em */
   font-weight: 400; /* regular */
   letter-spacing: .0178571429em; /* .25 / 14px */
 }
 
-.subtitle {
+.subtitle{
   font-size: 1em; /* 16px = 16px * 1em */
   line-height: 1.75em; /* 28px = 16px * 1.75em */
   font-weight: 400;
@@ -263,14 +233,14 @@ p.margintop{
   text-transform: uppercase;
 }
 
-.caption {
+.caption{
   font-size: .75em; /* 12px = 16px * .75em */
   line-height: 1.25rem; /* 20px = 16px * 1.25em */
   font-weight: 400; /* regular */
   letter-spacing: .0333333333em; /* .04 / 12px */
 }
 
-.overline {
+.overline{
   font-size: .75em; /* 12px = 16px * .75em */
   line-height: 2rem; /* 32px = 16px * 2em */
   font-weight: 500; /* regular */
@@ -279,15 +249,13 @@ p.margintop{
   padding: 0 0 1rem 0;
 }
 
-.title {
+.title{
   text-align: center;
 }
 
 
-/* ==================================================================== */
-/* =====================  Colors ====================================== */
-/* ==================================================================== */
 
+/* ======== Colors ======== */
 .white{
   background-color: white;
 }
@@ -461,7 +429,7 @@ p.margintop{
 /* expansion button */
 .expand-button{
   margin: 2rem;
-  padding: 0rem;
+  padding: 0;
   transition: 0.3s;
   position: relative;
 }
@@ -476,23 +444,15 @@ p.margintop{
 
 
 
-/* ==================================================================== */
-/* ==================================================================== */
-/* ==================================================================== */
+
 /* ==================================================================== */
 /* ====================== Part 3: Core components  ==================== */
 /* ==================================================================== */
-/* ==================================================================== */
-/* ==================================================================== */
-/* ==================================================================== */
 
 
 
 
-/* ==================================================================== */
-/* ======================== Navigation ================================ */
-/* ==================================================================== */
-
+/* ======== Navigation ======== */
 .menubtn{
   border: 0;
   margin: 0;
@@ -530,7 +490,7 @@ p.margintop{
   transition: 0.2s;
 }
 
-.navitemlist li a:hover {
+.navitemlist li a:hover{
   position: relative;
   /*background-color: whitesmoke;*/
   box-shadow:inset 0 -4px 0 0 grey;
@@ -544,10 +504,8 @@ p.margintop{
 }
 
 
-/* ==================================================================== */
-/* =================== Navigation Drawer ============================== */
-/* ==================================================================== */
 
+/* ======== Navigation Drawer ======== */
 /* drawer buttons */
 .drawerbtn{
   border: 0;
@@ -583,7 +541,7 @@ p.margintop{
 }
 
 /* hides checkbox */
-.drawer-toggle {
+.drawer-toggle{
   position: absolute;
   opacity: 0;
   visibility: hidden; /* remove if you use hyperlinks instead of anchors */
@@ -595,7 +553,7 @@ p.margintop{
 }
 
 /* drawer menu pane */
-.drawer {
+.drawer{
   z-index: 4;
   position: fixed;
   top: 0;
@@ -612,12 +570,12 @@ p.margintop{
 .drawer-toggle:checked{
   height: 100%;
   width: calc(100%);
-  background: rbg(255 255 255);
+  background: black;
   background: rgba(255, 255, 255, .8);
 }
 
 .drawer-toggle:checked ~ .drawer{
-  left: 0px;
+  left: 0;
 }
 
 /* edit drawer when checked */
@@ -654,23 +612,12 @@ p.margintop{
   background-color: white;
 }
 
-.draweritemlist li a:hover {
+.draweritemlist li a:hover{
   background-color: whitesmoke;
 }
 
-/* drawer buttons */
-.cleanbtn{
-  border: 0;
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-  outline: none;
-}
 
-/* ==================================================================== */
-/* =========================== Footer ================================= */
-/* ==================================================================== */
-
+/* ======== Footer ======== */
 /* footer */
 footer div{
   display: flex;
@@ -685,23 +632,15 @@ footer div p.caption{
 
 
 
-/* ==================================================================== */
-/* ==================================================================== */
-/* ==================================================================== */
+
 /* ==================================================================== */
 /* ====================== Part 4: Main Pages ========================== */
 /* ==================================================================== */
-/* ==================================================================== */
-/* ==================================================================== */
-/* ==================================================================== */
 
 
 
 
-/* ==================================================================== */
-/* ============================ Homepage ============================== */
-/* ==================================================================== */
-
+/* ======== Homepage ======== */
 .homepage{
   position: relative;
   height: calc(100vh - 128px);
@@ -724,14 +663,13 @@ footer div p.caption{
   height: 100%;
   left: 0;
   top: 0;
+  background-color: black;
   background-color:rgba(255,255,255,0.1); /* almost transparent white */
 }
 
 
-/* ==================================================================== */
-/* ============================ Bio page ============================== */
-/* ==================================================================== */
 
+/* ======== Bio page ======== */
 .item{
   display: block;
   width: 100%;
@@ -748,8 +686,6 @@ footer div p.caption{
   width: calc(100%/1 - (1rem * .50));
   position: relative;
   vertical-align: middle;
-
-
   max-width: 500px;
 }
 
@@ -767,18 +703,11 @@ footer div p.caption{
   position: relative;
   vertical-align: middle;
   text-align: center;
-  
-
-
 }
 
 .item .description h4, .item .description p{
   max-width: 500px;
 }
-
-
-
-
 
 /* item hidden elements toggle */
 .flex-col-3 .project-item .project-item-content .hide-me{
@@ -791,17 +720,7 @@ footer div p.caption{
 
 
 
-
-
-
-
-
-
-/* ==================================================================== */
-/* ============================ Project page ========================== */
-/* ==================================================================== */
-
-
+/* ======== Project page ======== */
 /* project grid */
 .flex{
   width: 100%;
@@ -847,6 +766,7 @@ footer div p.caption{
   width: 100%;
   padding: 1rem;
   color: white;
+  background-color: grey;
   background-color: rgba(50,50,50,0.9);
   transition-duration: .5s;
   opacity: 0;
@@ -868,9 +788,6 @@ footer div p.caption{
   background: transparent;
 }
 
-/* max height for img */
-
-
 /* project item expand */
 .flex-col-3:focus-within{
   min-width: calc(100% - 1rem);
@@ -891,6 +808,7 @@ footer div p.caption{
 }
 
 .flex-col-3:focus-within .project-item-content:focus{
+  background-color: grey;
   background-color: rgba(50,50,50,0.9);
   opacity: 1;
   top: 0;
@@ -906,17 +824,9 @@ footer div p.caption{
     display: none;
 }
 
-/* resizing */
 
 
-
-
-
-
-/* ==================================================================== */
-/* ============================ Contact page ========================== */
-/* ==================================================================== */
-
+/* ======== Contact page ======== */
 .formitem{
   width: 100%;
   padding: .5rem;
@@ -944,36 +854,16 @@ textarea.formitem{
 
 
 
-
-
-
-
-
-
-/* ==================================================================== */
-/* ==================================================================== */
-/* ==================================================================== */
 /* ==================================================================== */
 /* ====================== Part 5: Media queries  ====================== */
 /* ==================================================================== */
-/* ==================================================================== */
-/* ==================================================================== */
-/* ==================================================================== */
-
-
-
-
 /* ==================================================================== */
 /* Notes: 360px minimum supported resolution.                           */
 /* Preferred Possible Break Points: 512px, 600px, 840px, 960px, 1280px, */
 /* 1440px, 1600px, 1920px.                                              */
 /* ==================================================================== */
 
-
-/* ==================================================================== */
-/* ================ Break Point 1: Extra small (600px) ================ */
-/* ==================================================================== */
-
+/* ======== Break Point 1: Extra small (600px) ======== */
 @media screen and (min-width: 38.2em) { 
   
   /* flex two columns */
@@ -1002,9 +892,8 @@ textarea.formitem{
 }
 
 
-/* ==================================================================== */
-/* ================ Break Point 2: Extra small (600px) ================ */
-/* ==================================================================== */
+
+/* ======== Break Point 2: Extra small (600px) ======== */
 @media screen and (min-width: 51.75em) {
 
   /* items */
@@ -1041,18 +930,6 @@ textarea.formitem{
     padding-right: 0;
   }
 
-
-
-
-
-  .item:nth-child(even) .description h4, .item:nth-child(even) .description p{
-
-  }
-
-  .item:nth-child(odd) .description h4, .item:nth-child(odd) .description p{
-
-  }
-
   .item:nth-child(even) .picture{
     left: 50%;
     padding-left: 1rem;
@@ -1067,16 +944,14 @@ textarea.formitem{
   }
 
   .item .description h4.margintop{
-    margin: 0 0 0 0 !important;
+    margin: 0 0 0 0;
   }
 
 }
 
 
-/* ==================================================================== */
-/* ================ Break Point 3: Medium (960px) (60em) ===================== */
-/* ==================================================================== */
 
+/* ======== Break Point 3: Medium (960px) (60em) ======== */
 @media screen and (min-width: 60em) {
   
   /* flex three columns */
@@ -1119,32 +994,14 @@ textarea.formitem{
 
 
 
-/* ==================================================================== */
-/* ================ Break Point 4: Medium-large (1280px) ============== */
-/* ==================================================================== */
-
+/* ======== Break Point 4: Medium-large (1280px) ======== */
 @media screen and (min-width: 80em) { 
   
-  /* limit size of content area */
-  /*
-  .container{
-    max-width: 1280px;
-    margin: 0 auto;
-  }
-
-  .container-half{
-    max-width: 640px;
-    margin: 0 auto;
-  }
-  */
-
 }
 
 
-/* ==================================================================== */
-/* ================ Break Point 5: Medium-large (1440px) ============== */
-/* ==================================================================== */
 
+/* ======== Break Point 5: Medium-large (1440px) ======== */
 @media screen and (min-width: 90em) { 
   
   /* hide hamburger menu */
@@ -1167,44 +1024,16 @@ textarea.formitem{
 }
 
 
-/* ==================================================================== */
-/* =============== Break Point 6: Extra large (1600px) ================ */
-/* ==================================================================== */
 
+/* ======== Break Point 6: Extra large (1600px) ======== */
 @media screen and (min-width: 100em) {
-  /* limit size of content area */
-  /*
-  .container{
-    max-width: 1280px;
-    margin: 0 auto;
-  }
-
-  .container-half{
-    max-width: 640px;
-    margin: 0 auto;
-  }
-  */
 
 }
 
 
-/* ==================================================================== */
-/* ================ Break Point 7: extra-large (1920px) =============== */
-/* ==================================================================== */
 
+/* ======== Break Point 7: extra-large (1920px) ======== */
 @media screen and (min-width: 120em) {
   
-  /* limit size of content area */
-  /*
-  .container{
-    max-width: 1600px;
-    margin: 0 auto;
-  }
-
-  .container-half{
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  */
   
 }
