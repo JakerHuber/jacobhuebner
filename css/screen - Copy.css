@@ -577,6 +577,8 @@ footer div p.caption{
   height: auto;
   flex-direction: column;
   justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
@@ -689,9 +691,8 @@ footer div p.caption{
 
 /* project item expand */
 .flex-col-3:focus-within{
-  min-width: 218px;
+  min-width: calc(100% - 1rem);
   height: 60vh;
-  width: 100%;
 }
 
 .flex-col-3:focus-within .thumbnail{
@@ -701,10 +702,10 @@ footer div p.caption{
 
 .flex-col-3:focus-within .project-item-content{
   width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: auto;
 }
 
 .flex-col-3:focus-within .project-item-content:focus{
@@ -806,48 +807,9 @@ footer div p.caption{
 
 }
 
-/* extra hacky please ignore */
-/* ======== Break Point 2.5: Extra small (800px) ======== */
-@media screen and (max-width: 51.75em) {
-  
-  /* START - FINALLY FIXED THE WEIRD STUFF HAPPENING WITH THE GRID BOXES */
-  .flex-col-3:focus-within .project-item .project-item-content:focus .hide-me{
-    display: inline-block;
-    width: 100% !important;
-    height: 100% !important;
-    box-sizing: border-box;
-    text-align: center;
-    padding-top: 1rem;
-  }
-
-  .flex-col-3 .project-item .project-item-content .hide-me .picture {
-    display: inline-block;
-    height: 50% !important;
-    width: 100% !important;
-    max-width: none;
-    margin-top: 0rem;
-    border: none !important;
-  }
-
-  .flex-col-3 .project-item .project-item-content .hide-me .description{
-    display: inline-block;
-    height: 50% !important;
-    width: 100% !important;
-    max-width: none;
-  }
-
-  .flex-col-3 .project-item .project-item-content .hide-me .picture img{
-    height: 100% !important;
-    width: auto !important;
-    object-fit: cover;
-    border: 6px solid #fff;
-  }
-  /* END - FINALLY FIXED THE WEIRD STUFF HAPPENING WITH THE GRID BOXES */
-  
-}
 
 
-/* ======== Break Point 2: Extra small (800px) ======== */
+/* ======== Break Point 2: Extra small (600px) ======== */
 @media screen and (min-width: 51.75em) {
 
   /* items */
@@ -863,7 +825,7 @@ footer div p.caption{
     padding-left: 1rem;
     padding-right: 0;
   }
-  
+	
   .item:nth-child(even) .picture{
     left: 50%;
     padding-left: 1rem;
