@@ -593,7 +593,7 @@ footer div p.caption{
 }
 
 .item .picture img.no-border{
-  border: none;
+  border: none !important;
 }
 
 .item .description{
