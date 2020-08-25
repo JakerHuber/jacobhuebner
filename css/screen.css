@@ -282,17 +282,7 @@ p.margintop{
 
 
 
-
-
-
-
-
-
-
-/* ==================================================================== */
-/* =========================== Formatting ============================= */
-/* ==================================================================== */
-
+/* ======== Formatting ======== */
 /* Frame */
 .frame{
   padding: 1rem;
@@ -354,31 +344,6 @@ p.margintop{
   transition-delay: 0.3s;
 }
 
-/* Links */
-.clean{
-  text-decoration: none;
-  color: black;
-}
-
-.relative{
-  position: relative;
-}
-
-/* expansion button */
-.expand-button{
-  margin: 2rem;
-  padding: 0;
-  transition: 0.3s;
-  position: relative;
-}
-
-.expand-button:hover{
-  margin: 1rem;
-  padding: 1rem;
-  font-size: 120%;
-  position: relative;
-}
-
 
 
 
@@ -386,9 +351,6 @@ p.margintop{
 /* ==================================================================== */
 /* ====================== Part 3: Core components  ==================== */
 /* ==================================================================== */
-
-
-
 
 /* ======== Navigation ======== */
 .menubtn{
