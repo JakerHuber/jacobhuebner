@@ -51,7 +51,7 @@ nav{
   z-index: 2;
   overflow: hidden;
   position: relative;
-  background-color: white !important;
+  background-color: white;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
@@ -94,7 +94,7 @@ footer{
   padding: 1rem 1rem;
   color: grey;
   background-color: white;
-  box-shadow: 0px -1.5px 3px -1.5px rgba(0,0,0,0.16);
+  box-shadow: 0 -1.5px 3px -1.5px rgba(0,0,0,0.16);
 }
 
 
@@ -533,13 +533,13 @@ p.margintop{
 .navitemlist li a:hover {
   position: relative;
   /*background-color: whitesmoke;*/
-  box-shadow:inset 0px -4px 0px 0px grey;
+  box-shadow:inset 0 -4px 0 0 grey;
   transition: 0.2s;
 }
 
 /* Highlight nav current page */
 .active{
-  box-shadow:inset 0px -4px 0px 0px grey;
+  box-shadow:inset 0 -4px 0 0 grey;
   transition: 0.2s;
 }
 
@@ -579,7 +579,7 @@ p.margintop{
   transition: .25s ease-in-out;
   margin: 0;
   padding: 0;
-  -webkit-text-size-adjust: none;
+  -webkit-text-size-adjust: none;  -ms-text-size-adjust: none;
 }
 
 /* hides checkbox */
@@ -747,8 +747,8 @@ footer div p.caption{
   width: calc(100%/1 - (1rem * .50));
   position: relative;
   vertical-align: middle;
-  padding-left: 0rem;
-  padding-right: 0rem;
+
+
   max-width: 500px;
 }
 
@@ -756,8 +756,8 @@ footer div p.caption{
   border: 6px solid #fff;
 }
 
-.no-border{
-  border: none !important;
+.item .picture img.no-border{
+  border: none;
 }
 
 .item .description{
@@ -766,26 +766,26 @@ footer div p.caption{
   position: relative;
   vertical-align: middle;
   text-align: center;
-  padding-left: 0rem;
-  padding-right: 0rem;
-  width: auto;
+  
+
+
 }
 
 .item .description h4, .item .description p{
   max-width: 500px;
 }
 
-.item .description h4.margintop{
-  margin: 0.5rem 0 0 0 !important;
-}
+
+
+
 
 /* item hidden elements toggle */
-.hide-me{
-  display: none !important;
+.flex-col-3 .project-item .project-item-content .hide-me{
+  display: none;
 }
 
-.show-me{
-  display: block !important;
+.flex-col-3 .project-item .project-item-content .show-me{
+  display: block;
 }
 
 
@@ -834,7 +834,7 @@ footer div p.caption{
 
 /* only adds bottom margin if there are more than 3 items */
 .flex-col-3:first-child:nth-last-child(3), .flex-col-3:first-child:nth-last-child(3) ~ .flex-col-3{
-  margin-bottom: 0rem;
+  margin-bottom: 0;
 }
 
 /* slide down description */
@@ -853,17 +853,17 @@ footer div p.caption{
   display: flex;
   align-items: center;
   justify-content: center;
-  align-items:center;
+
 }
 
 .flex-col-3:hover .project-item-content{
   opacity: 1;
-  top: 0%;
+  top: 0;
 }
 
 /* make scrollbar transparent */
 .project-item-content::-webkit-scrollbar{
-  width: 0px;
+  width: 0;
   background: transparent;
 }
 
@@ -887,26 +887,26 @@ footer div p.caption{
   display: flex;
   align-items: center;
   justify-content: center;
-  align-items:center;
 }
 
 .flex-col-3:focus-within .project-item-content:focus{
   background-color: rgba(50,50,50,0.9);
   opacity: 1;
-  top: 0%;
+  top: 0;
   text-align: center;
   
 }
 
-.flex-col-3:focus-within .project-item-content:focus .hide-me{
-    display: block !important;
+.flex-col-3:focus-within .project-item .project-item-content:focus .hide-me{
+    display: block;
 }
 
-.flex-col-3:focus-within .project-item-content:focus .show-me{
-    display: none !important;
+.flex-col-3:focus-within .project-item .project-item-content:focus .show-me{
+    display: none;
 }
 
 /* resizing */
+
 
 
 
@@ -933,7 +933,7 @@ footer div p.caption{
   color: black;
 }
 
-#contact-form textarea{
+textarea.formitem{
   max-width: 655px;
   min-width: 100%;
 }
@@ -1020,7 +1020,7 @@ footer div p.caption{
     display: inline-block;
     width: calc(100%/2 - (1rem * .13));
     overflow: hidden;
-    padding-left: 0rem;
+    padding-left: 0;
     padding-right: 1rem;
   }
   
@@ -1037,33 +1037,31 @@ footer div p.caption{
     text-align: left;
     min-width: 270px;
     padding-left: 1rem;
-    padding-right: 0rem;
+    padding-right: 0;
   }
 
-  .item .description h4, .item .description p{
-    max-width: 350px;
-  }
+
+
+
 
   .item:nth-child(even) .description h4, .item:nth-child(even) .description p{
-    clear: both;
-    float: right;
+
   }
 
   .item:nth-child(odd) .description h4, .item:nth-child(odd) .description p{
-    clear: both;
-    float: left;
+
   }
 
   .item:nth-child(even) .picture{
     left: 50%;
     padding-left: 1rem;
-    padding-right: 0rem;
+    padding-right: 0;
   }
 
   .item:nth-child(even) .description{
     right: 50%;
     text-align: right;
-    padding-left: 0rem;
+    padding-left: 0;
     padding-right: 1rem;
   }
 
@@ -1083,7 +1081,7 @@ footer div p.caption{
   /* flex three columns */
   .flex-col-3{
     width: calc(100%/3 - 1rem);
-    height: none;
+    height: auto;
   }
 
   /* small size grid */
@@ -1206,6 +1204,6 @@ footer div p.caption{
     max-width: 800px;
     margin: 0 auto;
   }
-  *?
+  */
   
 }
