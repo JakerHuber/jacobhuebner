@@ -4,7 +4,7 @@ Programmers: Jacob Huebner
 File Name: screens.css
 
 Material design scale
-https://material.io/design/typography/the-type-system.html#type-scale
+https://material.io/design/typography/the-type-system.html
 
 Table of Contents:
 1. Core HTML
@@ -583,19 +583,19 @@ p.margintop{
 }
 
 /* hides checkbox */
-#drawer-toggle {
+.drawer-toggle {
   position: absolute;
   opacity: 0;
   visibility: hidden; /* remove if you use hyperlinks instead of anchors */
 }
 
 /* changes transition color to be more subtle */
-#drawer-toggle-label{
+.drawer-toggle-label{
   background-color: rgba(0, 0, 255, 0);
 }
 
 /* drawer menu pane */
-#drawer {
+.drawer {
   z-index: 4;
   position: fixed;
   top: 0;
@@ -609,18 +609,19 @@ p.margintop{
 }
 
 /* checked styles (menu open state) */
-#drawer-toggle:checked{
+.drawer-toggle:checked{
   height: 100%;
   width: calc(100%);
+  background: rbg(255 255 255);
   background: rgba(255, 255, 255, .8);
 }
 
-#drawer-toggle:checked ~ #drawer{
+.drawer-toggle:checked ~ .drawer{
   left: 0px;
 }
 
 /* edit drawer when checked */
-#drawer-toggle:checked ~ #drawer-toggle-label{
+.drawer-toggle:checked ~ .drawer-toggle-label{
   position: fixed;
   height: 100%;
   width: calc(100%);
@@ -633,7 +634,7 @@ p.margintop{
 }
 
 /* fix moved company logo */
-#drawer-toggle:checked ~ #logo{
+.drawer-toggle:checked ~ .logo{
   margin-left: 51.3px;
 }
 
@@ -1147,19 +1148,19 @@ textarea.formitem{
 @media screen and (min-width: 90em) { 
   
   /* hide hamburger menu */
-  #drawer-toggle-label{
+  .drawer-toggle-label{
     display: none;
   }
 
-  #drawer-toggle{
+  .drawer-toggle{
     display: none;
   }
 
-  #drawer{
+  .drawer{
     display: none;
   }
 
-  #drawer-toggle:checked ~ #logo{
+  .drawer-toggle:checked ~ .logo{
     margin-left: 0;
   }
 
