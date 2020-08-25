@@ -28,7 +28,7 @@
             <ul class="draweritemlist">
               <li><p class="button drawertitlebtn">ʕ˵ᵔᴥᵔ˵ʔノ Portfolio</p></li>
             </ul>
-            <ul class="draweritemlist padtopbottom">
+            <ul class="draweritemlist">
               <li><p class="drawertitlebtn">Main pages</p></li>
               <li><a class="body2 drawerbtn" href="#home">Home</a></li>
               <li><a class="body2 drawerbtn" href="#bio">Bio</a></li>
@@ -740,22 +740,22 @@
                 <h2 class="margin">Contact</h2>
               </div>
               <!-- social media links -->
-              <a class="clean padleftright" href="https://linkedin.com/in/jacobhuebner"><h1 class="inline linkedin"><i class="fab fa-linkedin"></i></h1></a>
-              <a class="clean padleftright" href="https://github.com/JakerHuber"><h1 class="inline github"><i class="fab fa-github-square"></i></h1></a>
-              <a class="clean padleftright" href="mailto:jhuebner@hawk.iit.edu"><h1 class="inline mailto"><i class="fas fa-envelope-square"></i></h1></a>
+              <a class="" href="https://linkedin.com/in/jacobhuebner"><h1 class="contact-icons linkedin"><i class="fab fa-linkedin"></i></h1></a>
+              <a class="" href="https://github.com/JakerHuber"><h1 class="contact-icons github"><i class="fab fa-github-square"></i></h1></a>
+              <a class="" href="mailto:jhuebner@hawk.iit.edu"><h1 class="contact-icons  mailto"><i class="fas fa-envelope-square"></i></h1></a>
               <!-- contact form -->
-              <div class="frame center medium-item">
+              <div class="frame center form">
                 <div class="container frame">
                   <!-- form begin -->
                   <!-- enctype="text/plain" -->
-                  <form id="contact-form" method="post" onsubmit="submitToAPI(event)" autocomplete="on">
+                  <form id="contact-forms" method="post" onsubmit="submitToAPI(event)" autocomplete="on">
                     <p class="margin aligncenter">You can send me a message by filling out the boxes below.</p>
                     <ol>
-                      <li class="padvertical"><input type="text" name="name-input" id="name-input" class="formitem" placeholder="Name" required></li>
-                      <li class="padvertical"><input type="tel" name="phone-input" id="phone-input" class="formitem" placeholder="Phone number"></li>
-                      <li class="padvertical"><input type="email" name="email-input" id="email-input" class="formitem" pattern="^.+@.+$" placeholder="Email address" required></li>
-                      <li class="padvertical"><textarea name="description-input" id="description-input" class="formitem" rows="4" cols="50" maxlength="500" placeholder="Message here..."  wrap="hard" required></textarea></li>
-                      <li class="padvertical"><input type="submit" name="submit" id="submit" class="button formitem" value="Send Message"></li>
+                      <li class="form-element"><input type="text" name="name-input" id="name-input" class="formitem" placeholder="Name" required></li>
+                      <li class="form-element"><input type="tel" name="phone-input" id="phone-input" class="formitem" placeholder="Phone number"></li>
+                      <li class="form-element"><input type="email" name="email-input" id="email-input" class="formitem" pattern="^.+@.+$" placeholder="Email address" required></li>
+                      <li class="form-element"><textarea name="description-input" id="description-input" class="formitem" rows="4" cols="50" maxlength="500" placeholder="Message here..."  wrap="hard" required></textarea></li>
+                      <li class="form-elements"><input type="submit" name="submit" id="submit" class="button formitem" value="Send Message"></li>
                     </ol>
                   </form>
                   <!-- form end -->

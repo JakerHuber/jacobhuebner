@@ -293,9 +293,9 @@ p.margintop{
 /* =========================== Formatting ============================= */
 /* ==================================================================== */
 
-/* Display */
-.inline{
-  display: inline-block;
+/* Frame */
+.frame{
+  padding: 1rem;
 }
 
 /* Alignment */
@@ -309,6 +309,7 @@ p.margintop{
   cursor: pointer;
 }
 
+/* Text alignment */ 
 .center{
   margin: 0 auto;
 }
@@ -321,6 +322,7 @@ p.margintop{
   text-align: right;
 }
 
+/* Horizontal and vertical div alignment */
 .aligncenter{
   text-align: center;
 }
@@ -331,16 +333,7 @@ p.margintop{
   justify-content: center;
 }
 
-/* Show and Hide classes */
-.show{
-  display: block;
-}
-
-.hide{
-  display: none;
-}
-
-/* Shadows */
+/* Shadows and hovershadows */
 .dropshadow0{
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
@@ -359,61 +352,6 @@ p.margintop{
 
 .hoverdelay{
   transition-delay: 0.3s;
-}
-
-.padtop{
-  padding: 2rem 0 0 0;
-}
-
-.padbottom{
-  padding: 0 0 2rem 0;
-}
-
-.padtopbottom{
-  padding: 2rem 0 2rem 0;
-}
-
-.padleft{
-  padding: 0 1rem 0 0;
-}
-
-.padright{
-  padding: 0 0 0 1rem;
-}
-
-.padleftright{
-  padding: 0 .5rem 0 .5rem;
-}
-
-.padvertical{
-  padding: .5rem 0;
-}
-
-/* Images */
-.small-img{
-  max-width: 255px;
-}
-
-.medium-img{
-  max-width: 512px;
-}
-
-.banner-img{
-  width: 700px;
-}
-
-/* Containers */
-.medium-item{
-  max-width: 720px;
-}
-
-/* Frame */
-.frame{
-  padding: 1rem;
-}
-
-.frame-medium{
-  padding: 2rem;
 }
 
 /* Links */
@@ -600,6 +538,7 @@ p.margintop{
 .draweritemlist{
   display: block;
   border-bottom: 1px solid lightgray;
+  padding: 2rem 0 2rem 0;
 }
 
 .draweritemlist li{
@@ -829,6 +768,16 @@ footer div p.caption{
 
 
 /* ======== Contact page ======== */
+/* Containers */
+.form{
+  max-width: 720px;
+}
+
+.contact-icons{
+  display: inline-block;
+  padding: 0 .5rem 0 .5rem;
+}
+
 .formitem{
   width: 100%;
   padding: .5rem;
@@ -846,10 +795,15 @@ footer div p.caption{
   color: black;
 }
 
-textarea.formitem{
+.form-element{
+  padding: .5rem 0;
+}
+
+.form-element textarea.formitem{
   max-width: 655px;
   min-width: 100%;
 }
+
 
 
 
