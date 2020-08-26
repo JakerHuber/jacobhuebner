@@ -909,82 +909,36 @@ footer div p.caption{
 /* ======== Break Point 1: Extra small (600px) ======== */
 @media screen and (min-width: 38.2em) { 
   
-  /* flex two columns */
-  .project-grid-item{
-    width: calc(50% - 1rem);
-  }
-  
-  
-  /* flex two columns */
-  .flex-col-3{
-    width: calc(50% - 1rem);
-  }
-  
-  /* small size grid */
-  .flex-col-3 .thumbnail{
-    max-height: none;
-  }
-  
-  /* Navigation items */
+  /* navigation */
+  /* navigation items */
   .navitemlist{
     clear: none;
     text-align: right;
     display: block;
   }
   
-  /* Home page resize */
+  /* homepage */
+  /* home page resize */
   .homepage{
     height: calc(100vh - 64px);
     font-size: 100%;
   }
+  
+  /* project grid */
+  /* project grid two columns */
+  .project-grid-item{
+    width: calc(50% - 1rem);
+  }
 
 }
 
-/* extra hacky please ignore */
-/* ======== Break Point 2.5: Extra small (800px) ======== */
-@media screen and (max-width: 51.75em) {
-  
-  /* START - FINALLY FIXED THE WEIRD STUFF HAPPENING WITH THE GRID BOXES */
-  .flex-col-3:focus-within .project-item .project-item-content:focus .hide-me{
-    display: inline-block;
-    width: 100% !important;
-    height: 100% !important;
-    box-sizing: border-box;
-    text-align: center;
-    padding-top: 1rem;
-  }
-
-  .flex-col-3 .project-item .project-item-content .hide-me .picture {
-    display: inline-block;
-    height: 50% !important;
-    width: 100% !important;
-    max-width: none;
-    margin-top: 0rem;
-    border: none !important;
-  }
-
-  .flex-col-3 .project-item .project-item-content .hide-me .description{
-    display: inline-block;
-    height: 50% !important;
-    width: 100% !important;
-    max-width: none;
-  }
-
-  .flex-col-3 .project-item .project-item-content .hide-me .picture img{
-    height: 100% !important;
-    width: auto !important;
-    object-fit: cover;
-    border: 6px solid #fff;
-  }
-  /* END - FINALLY FIXED THE WEIRD STUFF HAPPENING WITH THE GRID BOXES */
-  
-}
 
 
 /* ======== Break Point 2: Extra small (800px) ======== */
 @media screen and (min-width: 51.75em) {
 
-  /* items */
+  /* project showcase */
+  /* project showcase two columns */ 
   .item .picture{
     width: calc(100%/2 - (1rem * .13));
     padding-left: 0;
@@ -1019,36 +973,10 @@ footer div p.caption{
 
 
 
-/* ======== Break Point 3: Medium (960px) (60em) ======== */
+/* ======== Break Point 3: Medium (960px) ======== */
 @media screen and (min-width: 60em) {
   
-  /* flex three columns */
-  .project-grid-item{
-    width: calc(100%/3 - 1rem);
-    height: auto;
-  }
-  
-  /* flex three columns */
-  .flex-col-3{
-    width: calc(100%/3 - 1rem);
-    height: auto;
-  }
-
-  /* small size grid */
-  .flex-col-3 .thumbnail{
-    max-height: none;
-  }
-  
-  /* flippable picture top */
-  .flipable-pic-top{
-    display: block;
-  }
-  
-  /* flippable picture bottom */
-  .flipable-pic-bottom{
-    display: none; 
-  }
-  
+  /* main html */
   /* limit size of content area */
   .container{
     max-width: 960px;
@@ -1060,8 +988,17 @@ footer div p.caption{
     margin: 0 auto;
   }
   
+  /* project showcase */
+  /* limit project showcase something */ 
   .item .picture{
     max-width: none;
+  }
+  
+  /* project grid */
+  /* make project grid three columns */
+  .project-grid-item{
+    width: calc(100%/3 - 1rem);
+    height: auto;
   }
 
 }
@@ -1078,6 +1015,7 @@ footer div p.caption{
 /* ======== Break Point 5: Medium-large (1440px) ======== */
 @media screen and (min-width: 90em) { 
   
+  /* navigation */
   /* hide hamburger menu */
   .drawer-toggle-label{
     display: none;
