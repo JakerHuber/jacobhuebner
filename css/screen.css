@@ -689,8 +689,16 @@ footer div p.caption{
   background-color: whitesmoke;
 }
 
-.projectbtn:first-child {
+.projectbtn:first-child{
     margin-right: 10px;
+}
+
+/* disables button */
+.btn-disable{
+  cursor: not-allowed;
+  pointer-events: none;
+  color: #c0c0c0;
+  background-color: #d0d0d0;
 }
 
 
