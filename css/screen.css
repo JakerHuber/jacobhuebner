@@ -8,11 +8,32 @@ https://material.io/design/typography/the-type-system.html
 
 Table of Contents:
 1. Core HTML
+    1.1 - HTML Structure
+    1.2 - Responsive media
 2. Core resources
-3. Core components 
+    2.1 - Scaled fonts
+    2.2 - Colors
+    2.3 - Formatting
+    2.4 - Alignment
+    2.5 - Dropshadows
+3. Core components
+    3.1 - Navigation
+    3.2 - Navigation Drawer
+    3.3 - Footer
 4. Main Pages
+    4.1 - Home page
+    4.2 - Bio page
+    4.3 - Project showcase page
+    4.4 - Project grid page
+    4.5 - Contact page
 5. Media queries
-
+    5.1 - Break Point 1: XXS  (600px)
+    5.2 - Break Point 2: XS   (800px)
+    5.3 - Break Point 3: S    (960px)
+    5.4 - Break Point 4: M    (1280px)
+    5.5 - Break Point 5: L    (1440px)
+    5.5 - Break Point 6: XL   (1600px)
+    5.5 - Break Point 7: 2XL  (1920px)
 */
 
 /* ==================================================================== */
@@ -288,7 +309,21 @@ p.margintop{
   padding: 1rem;
 }
 
-/* Alignment */
+/* Flex */
+.flex{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.flex img{
+  width: 100%;
+}
+
+
+
+/* ======== Alignment ======== */
 .left{
   float: left;
   cursor: pointer;
@@ -323,7 +358,9 @@ p.margintop{
   justify-content: center;
 }
 
-/* Shadows and hovershadows */
+
+
+/* ======== Dropshadows ======== */
 .dropshadow0{
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
@@ -541,7 +578,7 @@ footer div p.caption{
 
 
 
-/* ======== Homepage ======== */
+/* ======== Home page ======== */
 .homepage{
   position: relative;
   height: calc(100vh - 128px);
@@ -609,6 +646,10 @@ footer div p.caption{
   margin-right: auto;
 }
 
+
+
+/* ======== Project showcase page ======== */
+/* project buttons */
 .project-buttons{
   
 }
@@ -654,118 +695,84 @@ footer div p.caption{
 
 
 
-
-/* ======== Project page ======== */
-/* project grid */
-.flex{
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
-
-.flex img{
-  width: 100%;
-}
-
-/* item hidden elements toggle */
-.flex-col-3 .project-item .project-item-content .hide-me{
-  display: none;
-}
-
-.flex-col-3 .project-item .project-item-content .show-me{
-  display: inline-block;
-}
-
-/* flex three columns */
-.flex-col-3{
+/* ======== Project grid page ======== */
+/* item */
+.project-grid-item{
   position: relative;
   overflow: hidden;
   max-width: calc(100% - 1rem);
-  margin-bottom: 1rem;
-  margin-left:  calc(1rem / 2);
-  margin-right: calc(1rem / 2);
-  max-height: 60vh;
-  min-width: 218px;
-  /* resize */
+  margin: .5rem .5rem .5rem .5rem;
 }
 
-/* small size grid */
-.flex-col-3 .thumbnail{
-  object-fit: cover;
-}
-
-/* only adds bottom margin if there are more than 3 items */
-.flex-col-3:first-child:nth-last-child(3), .flex-col-3:first-child:nth-last-child(3) ~ .flex-col-3{
-  margin-bottom: 0;
-}
-
-/* slide down description */
-.project-item-content{
-  position: absolute;
-  overflow:scroll;
-  overflow-x: hidden;
-  height: 100%;
-  width: 100%;
-  padding: 1rem;
+/* description */
+.showcase{
+  display: none;
+  position: relative;
+  z-index: 2;
+  background-color: rgba(50,50,50,0.8);
   color: white;
-  background-color: grey;
-  background-color: rgba(50,50,50,0.9);
-  transition-duration: .5s;
-  opacity: 0;
-  top: -100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-}
-
-.flex-col-3:hover .project-item-content{
-  opacity: 1;
-  top: 0;
 }
 
 /* make scrollbar transparent */
-.project-item-content::-webkit-scrollbar{
+.showcase::-webkit-scrollbar{
   width: 0;
   background: transparent;
 }
 
-/* project item expand */
-.flex-col-3:focus-within{
-  min-width: 218px;
-  height: 60vh;
+/* rolling shade */
+.rolling-shade{
+  position: absolute;
+  overflow: hidden;
   width: 100%;
-}
-
-.flex-col-3:focus-within .thumbnail{
-  object-fit:cover;
-  height: 60vh;
-}
-
-.flex-col-3:focus-within .project-item-content{
-  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  color: white;
+  visibility: visible;
+  /* animation */ 
+  background-color: rgba(50,50,50,0.9);
+  opacity: 0;
+  top: -100%;
+  transition-duration: .5s;
+  /* center title */
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: auto;
+  z-index: 1;
 }
 
-.flex-col-3:focus-within .project-item-content:focus{
-  background-color: grey;
-  background-color: rgba(50,50,50,0.9);
+/* displays rolling shade on hover */
+.project-grid-item:hover .rolling-shade{
   opacity: 1;
+  top: 0%;
+}
+
+/* expands project */
+.project-grid-item:focus-within{
+  width: 100%;
+}
+
+/* expands thumbnail */
+.project-grid-item:focus-within .tile-image{
+  display: inline-block;
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
   top: 0;
-  text-align: center;
-  
+  left: 0;
+  max-width: none;
+  max-height: none;
 }
 
-.flex-col-3:focus-within .project-item .project-item-content:focus .hide-me{
-    display: block;
+/* hides rolling shade on expansion */ 
+.project-grid-item:focus-within .rolling-shade{
+  opacity: 0;
+  transition-duration: 0s;
 }
 
-.flex-col-3:focus-within .project-item .project-item-content:focus .show-me{
-    display: none;
+/* displays showcase on expansion */ 
+.project-grid-item:focus-within .showcase{
+  display: block;
 }
 
 
@@ -811,77 +818,6 @@ footer div p.caption{
 
 
 
-/* the new flex-col-3 */
-.project-grid-item{
-  position: relative;
-  overflow: hidden;
-  max-width: calc(100% - 1rem);
-  margin: .5rem .5rem .5rem .5rem;
-}
-
-/* resizes to fit width */
-.project-grid-item:focus-within{
-  width: 100%;
-}
-
-/* the new thumbnail */
-.project-grid-item:focus-within .tile-image{
-  display: inline-block;
-  position: absolute;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  max-width: none;
-  max-height: none;
-}
-
-.showcase{
-  display: none;
-  position: relative;
-  z-index: 2;
-  background-color: rgba(50,50,50,0.8);
-  color: white;
-}
-
-.rolling-shade{
-  position: absolute;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  padding: 1rem;
-  color: white;
-  visibility: visible;
-  /* animation */ 
-  background-color: rgba(50,50,50,0.9);
-  opacity: 0;
-  top: -100%;
-  transition-duration: .5s;
-  /* center title */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
-}
-
-/* displays rolling shade on hover */
-.project-grid-item:hover .rolling-shade{
-  opacity: 1;
-  top: 0%;
-}
-
-/* hides rolling shade on click */ 
-.project-grid-item:focus-within .rolling-shade{
-  opacity: 0;
-  transition-duration: 0s;
-}
-
-/* displays showcase on click */ 
-.project-grid-item:focus-within .showcase{
-  display: block;
-}
-
 
 
 
@@ -906,7 +842,7 @@ footer div p.caption{
 /* 1440px, 1600px, 1920px.                                              */
 /* ==================================================================== */
 
-/* ======== Break Point 1: Extra small (600px) ======== */
+/* ======== Break Point 1: XXS  (600px) ======== */
 @media screen and (min-width: 38.2em) { 
   
   /* navigation */
@@ -934,7 +870,7 @@ footer div p.caption{
 
 
 
-/* ======== Break Point 2: Extra small (800px) ======== */
+/* ======== Break Point 2: XS   (800px) ======== */
 @media screen and (min-width: 51.75em) {
 
   /* project showcase */
@@ -973,7 +909,7 @@ footer div p.caption{
 
 
 
-/* ======== Break Point 3: Medium (960px) ======== */
+/* ======== Break Point 3: S    (960px) ======== */
 @media screen and (min-width: 60em) {
   
   /* main html */
@@ -1005,14 +941,14 @@ footer div p.caption{
 
 
 
-/* ======== Break Point 4: Medium-large (1280px) ======== */
+/* ======== Break Point 4: M    (1280px) ======== */
 @media screen and (min-width: 80em) { 
   
 }
 
 
 
-/* ======== Break Point 5: Medium-large (1440px) ======== */
+/* ======== Break Point 5: L    (1440px) ======== */
 @media screen and (min-width: 90em) { 
   
   /* navigation */
@@ -1037,14 +973,14 @@ footer div p.caption{
 
 
 
-/* ======== Break Point 6: Extra large (1600px) ======== */
+/* ======== Break Point 6: XL   (1600px) ======== */
 @media screen and (min-width: 100em) {
 
 }
 
 
 
-/* ======== Break Point 7: extra-large (1920px) ======== */
+/* ======== Break Point 7: 2XL  (1920px) ======== */
 @media screen and (min-width: 120em) {
   
   
