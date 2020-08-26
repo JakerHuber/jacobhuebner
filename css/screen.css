@@ -486,6 +486,8 @@ p.margintop{
 /* changes transition color to be more subtle */
 .drawer-toggle-label{
   background-color: rgba(0, 0, 255, 0);
+  top: 0;
+  left: 0;
 }
 
 /* drawer menu pane */
