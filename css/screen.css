@@ -630,7 +630,7 @@ footer div p.caption{
 }
 
 .item .picture img.no-border{
-  border: none !important;
+  border: none;
 }
 
 .item .description{
@@ -711,6 +711,8 @@ footer div p.caption{
   z-index: 2;
   background-color: rgba(50,50,50,0.8);
   color: white;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 /* make scrollbar transparent */
@@ -729,7 +731,7 @@ footer div p.caption{
   color: white;
   visibility: visible;
   /* animation */ 
-  background-color: rgba(50,50,50,0.9);
+  background-color: rgba(50,50,50,0.85);
   opacity: 0;
   top: -100%;
   transition-duration: .5s;
@@ -762,6 +764,8 @@ footer div p.caption{
   left: 0;
   max-width: none;
   max-height: none;
+  filter: blur(6px);
+  -webkit-filter: blur(6px);
 }
 
 /* hides rolling shade on expansion */ 
