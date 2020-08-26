@@ -811,6 +811,90 @@ footer div p.caption{
 
 
 
+/* the new flex-col-3 */
+.project-grid-item{
+  position: relative;
+  overflow: hidden;
+  max-width: calc(100% - 1rem);
+  margin: .5rem .5rem .5rem .5rem;
+}
+
+/* resizes to fit width */
+.project-grid-item:focus-within{
+  width: 100%;
+}
+
+/* the new thumbnail */
+.project-grid-item:focus-within .tile-image{
+  display: inline-block;
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  max-width: none;
+  max-height: none;
+}
+
+.showcase{
+  display: none;
+  position: relative;
+  z-index: 2;
+  background-color: rgba(50,50,50,0.8);
+  color: white;
+}
+
+.rolling-shade{
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  color: white;
+  visibility: visible;
+  /* animation */ 
+  background-color: rgba(50,50,50,0.9);
+  opacity: 0;
+  top: -100%;
+  transition-duration: .5s;
+  /* center title */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+/* displays rolling shade on hover */
+.project-grid-item:hover .rolling-shade{
+  opacity: 1;
+  top: 0%;
+}
+
+/* hides rolling shade on click */ 
+.project-grid-item:focus-within .rolling-shade{
+  opacity: 0;
+  transition-duration: 0s;
+}
+
+/* displays showcase on click */ 
+.project-grid-item:focus-within .showcase{
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* ==================================================================== */
@@ -824,6 +908,12 @@ footer div p.caption{
 
 /* ======== Break Point 1: Extra small (600px) ======== */
 @media screen and (min-width: 38.2em) { 
+  
+  /* flex two columns */
+  .project-grid-item{
+    width: calc(50% - 1rem);
+  }
+  
   
   /* flex two columns */
   .flex-col-3{
@@ -931,6 +1021,12 @@ footer div p.caption{
 
 /* ======== Break Point 3: Medium (960px) (60em) ======== */
 @media screen and (min-width: 60em) {
+  
+  /* flex three columns */
+  .project-grid-item{
+    width: calc(100%/3 - 1rem);
+    height: auto;
+  }
   
   /* flex three columns */
   .flex-col-3{
