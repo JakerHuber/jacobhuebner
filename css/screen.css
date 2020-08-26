@@ -485,9 +485,8 @@ p.margintop{
 
 /* changes transition color to be more subtle */
 .drawer-toggle-label{
+  display: block;
   background-color: rgba(0, 0, 255, 0);
-  top: 0;
-  left: 0;
 }
 
 /* drawer menu pane */
@@ -524,9 +523,7 @@ p.margintop{
   color: black;
   background-color: black;
   opacity: .5;
-  transition-property: background;
-  transition-duration: .2s;
-  transition-timing-function: linear;
+  transition: background .2s linear;
 }
 
 /* fix moved company logo */
