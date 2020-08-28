@@ -45,10 +45,6 @@ Table of Contents:
   box-sizing: inherit;
 }
 
-*:not(input) {
-  -ms-user-select: none;
-}
-
 html{
   box-sizing: border-box; /* Note: Using border-box instead of content-box */
 }
