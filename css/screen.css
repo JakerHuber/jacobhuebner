@@ -699,6 +699,9 @@ footer div p.caption{
   background-color: #d0d0d0;
 }
 
+.btn-hide{
+  display: none;
+}
 
 
 /* ======== Project grid page ======== */
